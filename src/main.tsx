@@ -1004,10 +1004,12 @@ function App() {
                     <button
                       className="primary"
                       onClick={() => {
-                        update((x) =>
-                          pending.type === "backup"
-                            ? (pending.data as State)
-                            : replaceBank(x, pending.data as Bank),
+                        update(
+                          (x) =>
+                            pending.type === "backup"
+                              ? (pending.data as State)
+                              : replaceBank(x, pending.data as Bank),
+                          true,
                         );
                         setPending(null);
                         setMessage("导入完成。");
