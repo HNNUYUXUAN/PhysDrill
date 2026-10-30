@@ -2,7 +2,7 @@ async (page) => {
   const errors = []
   page.on("pageerror", (e) => errors.push(e.message))
   await page.setViewportSize({ width: 1440, height: 1000 })
-  await page.goto("http://127.0.0.1:5173")
+  await page.goto("http://127.0.0.1:5173/PhysDrill/")
   await page.screenshot({ path: "docs/assets/overview.png", fullPage: true })
   await page.getByRole("button", { name: "开始速刷", exact: true }).click()
   await page.getByLabel("你的程序 / 作答").fill("Sin[x]")

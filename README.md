@@ -6,6 +6,14 @@
 
 ![PhysDrill 首页，首次使用的真实零记录状态](docs/assets/overview.png)
 
+## 在线刷题
+
+**[打开 PhysDrill →](https://hnnuyuxuan.github.io/PhysDrill/)**
+
+电脑和手机均可直接访问，无需安装。在线版与本地版的记录分别存储；不同设备的进度可通过设置中的 JSON 备份导出、导入转移。
+
+前端参考 [General Physics Lab](https://hnnuyuxuan.github.io/general-physics-lab/simulations/) 的学术阅读布局：白底、衬线字体、顶部导航和可展开模块目录。
+
 ## 开始使用
 
 需要 Node.js 24 和 npm。在项目目录运行：
@@ -15,7 +23,7 @@ npm ci
 npm run dev
 ```
 
-打开 [本地应用](http://127.0.0.1:5173)，点击「开始速刷」。无需账户、后端或 Mathematica 安装。依赖首次安装需要网络，应用运行无需外部 API。
+打开 [本地应用](http://127.0.0.1:5173/PhysDrill/)，点击「开始速刷」。无需账户、后端或 Mathematica 安装。依赖首次安装需要网络，应用运行无需外部 API。
 
 ```sh
 npm test
@@ -25,7 +33,7 @@ npm run build
 npm run preview
 ```
 
-开发服务和预览均使用 `127.0.0.1:5173`，应先停止另一个服务；端口占用时启动失败。生产文件输出到 `dist/`，可由静态 HTTP 服务托管。
+开发服务和预览均使用 `127.0.0.1:5173/PhysDrill/`，应先停止另一个服务；端口占用时启动失败。生产文件输出到 `dist/`，可由静态 HTTP 服务托管。
 
 ## 为反复练习设计
 
@@ -75,3 +83,7 @@ flowchart LR
 项目包含核心逻辑测试、全部公式渲染检查、构建及 GitHub Actions。真实 Chromium 验收脚本见 `scripts/browser-check.cjs`，需要使用已安装的 Playwright CLI，应用不依赖该运行时。
 
 当前 Wolfram 内核对部分旧包不提供兼容支持，并在部分现代绘图计算中返回内部诊断；这些状态见核验记录，不能将语法解析通过等同于完整数学或图形验证。应用不在浏览器执行 Mathematica。
+
+## 网站部署
+
+推送到 main 后，GitHub Actions 运行测试和构建，将 `dist/` 自动部署到 GitHub Pages。项目路径为 `/PhysDrill/`，公式字体与图标均随构建发布。部署工作流见 `.github/workflows/pages.yml`。

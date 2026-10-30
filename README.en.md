@@ -6,6 +6,14 @@ A local-first practice application for handwritten computational physics exams. 
 
 ![Actual first-use dashboard with zero practice records](docs/assets/overview.png)
 
+## Practice online
+
+**[Open PhysDrill →](https://hnnuyuxuan.github.io/PhysDrill/)**
+
+Use it directly on desktop or mobile without installing anything. Each browser stores its own progress. Transfer records between devices or from localhost through JSON backup export/import in Settings.
+
+The interface follows the academic reading style of [General Physics Lab](https://hnnuyuxuan.github.io/general-physics-lab/simulations/): white paper, serif typography, top navigation, and expandable module directories.
+
 ## Run locally
 
 Requires Node.js 24 and npm.
@@ -15,7 +23,7 @@ npm ci
 npm run dev
 ```
 
-Open [PhysDrill locally](http://127.0.0.1:5173). No account, backend, or Mathematica installation is required. Dependency installation needs network access; the application uses no external runtime API.
+Open [PhysDrill locally](http://127.0.0.1:5173/PhysDrill/). No account, backend, or Mathematica installation is required. Dependency installation needs network access; the application uses no external runtime API.
 
 ```sh
 npm test
@@ -75,3 +83,7 @@ Run `npm run bank` after changing conversion rules or corrections, then run test
 Core tests, formula rendering, type checks, builds, and GitHub Actions are included. `scripts/browser-check.cjs` drives actual browser checks through an existing fixed Playwright CLI installation; this runtime is not an application dependency.
 
 The available Wolfram kernel lacks several legacy packages and reports internal diagnostics for some modern plotting operations. These are recorded separately from syntax validation. Successful parsing is not proof of full mathematical or graphical correctness. The browser does not execute Mathematica code.
+
+## Deployment
+
+Pushes to main run tests and build, then publish `dist/` through GitHub Actions to GitHub Pages. The project base path is `/PhysDrill/`; formula fonts and icons ship with the build. See `.github/workflows/pages.yml`.

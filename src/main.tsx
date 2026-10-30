@@ -1,4 +1,5 @@
-import { StatsDetails, streak } from "./StatsDetails";
+import { Overview } from "./Overview";
+import { StatsDetails } from "./StatsDetails";
 import { createRoot } from "react-dom/client";
 import { useState } from "react";
 import {
@@ -17,7 +18,7 @@ import Markdown from "react-markdown";
 import remarkMath from "remark-math";
 import rehypeKatex from "rehype-katex";
 import "katex/dist/katex.min.css";
-import "./style.css";
+import "./academic.css";
 import { Store, useStore } from "./store";
 import {
   answer,
@@ -251,7 +252,7 @@ function App() {
   }
   return (
     <div className="app">
-      <aside>
+      <aside aria-label="站点导航">
         <a
           className="brand"
           href="#"
@@ -266,9 +267,10 @@ function App() {
           </span>
         </a>
         <div className="sidebar-label">学习空间</div>
-        <nav>
+        <nav aria-label="主要导航">
           {nav.map(([id, label, Icon]) => (
             <button
+              aria-current={page === id ? "page" : undefined}
               className={page === id ? "active" : ""}
               onClick={() => {
                 setPage(id);
@@ -323,100 +325,16 @@ function App() {
           </div>
         )}
         {page === "overview" && (
-          <>
-            <div className="page-heading">
-              <div className="eyebrow">把知识写出来</div>
-              <h1>下一次下笔，更有把握。</h1>
-              <p>从一个命令开始，练到完整写出。今天也向熟练迈进一步。</p>
-              <small>
-                连续练习 {streak(s)} 天 · 错题 {st.wrong} 道
-              </small>
-            </div>
-            <section className="hero">
-              <div>
-                <span className="eyebrow">QUICK DRILL</span>
-                <h2>十道题，找回手感。</h2>
-                <p>回忆 · 书写 · 对照 · 再练习</p>
-                <button
-                  className="primary"
-                  onClick={() =>
-                    session && !session.finished ? setPage("drill") : launch()
-                  }
-                >
-                  {session && !session.finished ? "继续练习" : "开始速刷"}
-                  <ArrowRight size={18} />
-                </button>
-              </div>
-              <div className="hero-code">
-                <span>01 / 回忆一个命令</span>
-                <code>Integrate[f[x], {"{x, a, b}"}]</code>
-                <small>方括号、花括号，每一次都写对。</small>
-              </div>
-            </section>
-            <div className="metrics">
-              {[
-                ["题库总量", st.total],
-                ["已练习", st.seen],
-                ["今日练习", st.today],
-                ["正确率", accuracy],
-                ["待复习", st.due],
-                ["已掌握", st.mastered],
-              ].map(([label, value]) => (
-                <div key={label}>
-                  <span>{label}</span>
-                  <strong>{value}</strong>
-                </div>
-              ))}
-            </div>
-            <div className="section-heading">
-              <h2>按模块巩固</h2>
-              <button
-                className="text-button"
-                onClick={() => setPage("categories")}
-              >
-                浏览全部题目 →
-              </button>
-            </div>
-            <div className="modules">
-              {s.bank.categories.map((c, i) => {
-                const a = stats(s, c.id);
-                return (
-                  <button
-                    className="module"
-                    key={c.id}
-                    onClick={() => {
-                      launch({ category: c.id, tag: "", filter: "all" });
-                    }}
-                  >
-                    <span className="module-num">0{i + 1}</span>
-                    <h3>{c.name}</h3>
-                    <p>
-                      {a.total} 道题 · 已掌握 {a.mastered}
-                    </p>
-                    <div className="bar">
-                      <i
-                        style={{
-                          width: `${a.total ? (100 * a.mastered) / a.total : 0}%`,
-                        }}
-                      />
-                    </div>
-                  </button>
-                );
-              })}
-            </div>
-            <div className="bottom-note">
-              <BookOpen size={20} />
-              <span>纸笔考试，重点是写出完整程序。</span>
-              <button onClick={() => launch({ mode: "paper" })}>
-                进入默写训练 →
-              </button>
-            </div>
-          </>
+          <Overview
+            state={s}
+            onStart={launch}
+            onResume={() => setPage("drill")}
+            onBrowse={() => setPage("categories")}
+          />
         )}
         {page === "drill" && (
           <>
             <div className="page-heading compact">
-              <div className="eyebrow">RETRIEVAL PRACTICE</div>
               <h1>快速训练</h1>
               <p>先独立回忆，再查看参考答案。</p>
             </div>

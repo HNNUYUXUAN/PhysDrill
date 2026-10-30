@@ -6,7 +6,7 @@ async (page) => {
   await page.getByRole("combobox", { name: "答案版本" }).selectOption("course")
   await page.getByRole("button", { name: "总览", exact: true }).click()
   await page.screenshot({ path: "docs/assets/overview.png", fullPage: true })
-  await page.getByRole("button", { name: "进入默写训练 →" }).click()
+  await page.getByRole("button", { name: "纸笔默写" }).click()
   if (await page.locator("textarea").count())
     throw Error("Paper mode forces input")
   await page.getByRole("button", { name: "显示参考答案" }).click()

@@ -1,5 +1,5 @@
 async (page) => {
-  await page.goto('http://127.0.0.1:5173')
+  await page.goto('http://127.0.0.1:5173/PhysDrill/')
   await page.evaluate(() => localStorage.setItem('physdrill.v1','{'))
   await page.reload()
   if(!(await page.getByRole('alert').innerText()).includes('读取失败'))throw Error('Corruption not reported')
