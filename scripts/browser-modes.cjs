@@ -1,5 +1,5 @@
 async (page) => {
-  page.on("dialog", (d) => d.accept())
+  await page.evaluate(() => { window.confirm = () => true })
   await page.setViewportSize({ width: 1440, height: 1000 })
   await page.getByRole("button", { name: "设置与数据", exact: true }).click()
   await page.getByRole("button", { name: "重置练习数据", exact: true }).click()
@@ -12,6 +12,7 @@ async (page) => {
   await page.getByRole("button", { name: "显示参考答案" }).click()
   await page.getByRole("button", { name: "不确定", exact: true }).click()
   await page.reload()
+  await page.evaluate(() => { window.confirm = () => true })
   if (!(await page.locator(".session-meta").innerText()).includes("1 / 10"))
     throw Error("Paper progress lost")
   await page.getByRole("button", { name: "结束", exact: true }).click()
@@ -30,11 +31,7 @@ async (page) => {
   if (!(await page.locator("main").innerText()).includes("程序辨析：1 次"))
     throw Error("History lost")
   await page.getByRole("button", { name: "设置与数据", exact: true }).click()
-  await page.getByLabel("导入题库或完整备份").setInputFiles({
-    name: "invalid.json",
-    mimeType: "application/json",
-    buffer: Buffer.from("{"),
-  })
+  await page.getByLabel("导入题库或完整备份").setInputFiles("scripts/fixtures/invalid.json")
   if (!(await page.getByRole("status").innerText()).includes("导入失败"))
     throw Error("Bad import accepted")
   return {
