@@ -1,0 +1,1904 @@
+{
+  "bankVersion": 1,
+  "categories": [
+    {
+      "id": "A",
+      "name": "基础符号"
+    },
+    {
+      "id": "B",
+      "name": "求解题"
+    },
+    {
+      "id": "C",
+      "name": "绘图题"
+    },
+    {
+      "id": "D",
+      "name": "综合计算"
+    }
+  ],
+  "rules": "## 考试书写规范与高频易错点\n\n### 1. Mathematica 语法\n\n- **函数名区分大小写**：函数名称按标准拼写书写，首字母及内部大写字母不能遗漏，例如 `Sin`、`Cos`、`Sqrt`、`ArcTan`、`Simplify`。\n- **函数参数使用方括号 `[]`**：例如 `Sin[x]`、`ArcTan[x]`、`Sqrt[x]`。不要写成 `Sin(x)`。\n- **圆括号 `()` 用于数学表达式分组**：例如 `(x^2-1)/(x-1)`。\n- **花括号 `{}` 用于列表、方程组和迭代范围**：例如 `{x, 1, 10}`、`{eq1, eq2}`。\n- **除法使用斜杠 `/`**：例如 `(x^2-1)/(x-1)`。\n- **根式必须写成函数形式**：平方根写 `Sqrt[x]`，不要在程序答案中直接画根号。\n- **对数参数顺序**：`Log[x, y]` 表示以 `x` 为底、`y` 为真数的对数。\n- **反三角函数注意内部大写**：例如 `ArcTan[x]`，`A`、`T` 均大写。\n- **复数相关命令**：共轭 `Conjugate[x]`，幅角 `Arg[x]`，实部 `Re[z]`，虚部 `Im[z]`。\n\n### 2. 等号与赋值\n\n- `=` 表示赋值，例如 `x = t^3 + 2 t + 4`。\n- `==` 表示方程中的相等关系，例如 `a x + b == 0`。\n- 求解方程时，方程条件必须使用 `==`，不能误写为赋值符号 `=`。\n\n### 3. 常见命令的变量写法\n\n- `Solve[方程, 变量]`：求解方程，需明确指定要求解的变量。\n- `Reduce[不等式]`：按题目给出的不等式求解；本复习题示例 `Reduce[5 x + 6 >= 0]` 不另加变量参数。\n- `Eliminate[{方程1, 方程2}, 变量]`：消去指定变量。方程组用花括号包围，方程之间用逗号分隔。\n- `Limit[表达式, 变量 -> 极限点]`：求极限。\n- `D[表达式, 变量]`：求导。\n- `Integrate[表达式, 变量]`：不定积分；定积分用 `{变量, 下限, 上限}` 指定积分区间。\n- `Sum[通项, {指标, 起点, 终点}]`：求和。\n- `Product[通项, {指标, 起点, 终点}]`：求连乘。\n\n### 4. 纸笔考试作答要求\n\n- 试卷给出题目和答题空格时，直接写出能够运行的 Mathematica 程序。\n- 不需要抄写运行结果，也不需要写 `In[1]`、`Out[1]` 等输入输出提示。\n- 手写时尤其检查函数大小写、方括号、圆括号、花括号、逗号、斜杠和等号。\n- 答案应完整写出命令及其参数，不要只写函数名称。\n\n",
+  "questions": [
+    {
+      "id": "A-001",
+      "categoryId": "A",
+      "title": "函数 $\\sin x$",
+      "prompt": "函数 $\\sin x$",
+      "answerType": "mathematica",
+      "tags": [
+        "Sin"
+      ],
+      "source": {
+        "file": "计算物理基础课程复习题库.md",
+        "section": "基础符号",
+        "item": 1,
+        "lineStart": 45,
+        "sha256": "9a2daf60b607e10afe5424030c01bcd6e7846fa6fea0b90de36de4c01f30632d"
+      },
+      "originalAnswer": "Sin[x]",
+      "originalSolution": "",
+      "variants": [
+        {
+          "id": "common",
+          "program": "Sin[x]",
+          "solution": "",
+          "note": "",
+          "revision": 1,
+          "verification": "source-checked"
+        }
+      ]
+    },
+    {
+      "id": "A-002",
+      "categoryId": "A",
+      "title": "函数 $\\cos x$",
+      "prompt": "函数 $\\cos x$",
+      "answerType": "mathematica",
+      "tags": [
+        "Cos"
+      ],
+      "source": {
+        "file": "计算物理基础课程复习题库.md",
+        "section": "基础符号",
+        "item": 2,
+        "lineStart": 46,
+        "sha256": "9a2daf60b607e10afe5424030c01bcd6e7846fa6fea0b90de36de4c01f30632d"
+      },
+      "originalAnswer": "Cos[x]",
+      "originalSolution": "",
+      "variants": [
+        {
+          "id": "common",
+          "program": "Cos[x]",
+          "solution": "",
+          "note": "",
+          "revision": 1,
+          "verification": "source-checked"
+        }
+      ]
+    },
+    {
+      "id": "A-003",
+      "categoryId": "A",
+      "title": "函数 $\\tan x$",
+      "prompt": "函数 $\\tan x$",
+      "answerType": "mathematica",
+      "tags": [
+        "Tan"
+      ],
+      "source": {
+        "file": "计算物理基础课程复习题库.md",
+        "section": "基础符号",
+        "item": 3,
+        "lineStart": 47,
+        "sha256": "9a2daf60b607e10afe5424030c01bcd6e7846fa6fea0b90de36de4c01f30632d"
+      },
+      "originalAnswer": "Tan[x]",
+      "originalSolution": "",
+      "variants": [
+        {
+          "id": "common",
+          "program": "Tan[x]",
+          "solution": "",
+          "note": "",
+          "revision": 1,
+          "verification": "source-checked"
+        }
+      ]
+    },
+    {
+      "id": "A-004",
+      "categoryId": "A",
+      "title": "函数 $\\cot x$",
+      "prompt": "函数 $\\cot x$",
+      "answerType": "mathematica",
+      "tags": [
+        "Cot"
+      ],
+      "source": {
+        "file": "计算物理基础课程复习题库.md",
+        "section": "基础符号",
+        "item": 4,
+        "lineStart": 48,
+        "sha256": "9a2daf60b607e10afe5424030c01bcd6e7846fa6fea0b90de36de4c01f30632d"
+      },
+      "originalAnswer": "Cot[x]",
+      "originalSolution": "",
+      "variants": [
+        {
+          "id": "common",
+          "program": "Cot[x]",
+          "solution": "",
+          "note": "",
+          "revision": 1,
+          "verification": "source-checked"
+        }
+      ]
+    },
+    {
+      "id": "A-005",
+      "categoryId": "A",
+      "title": "函数 $\\sec x$",
+      "prompt": "函数 $\\sec x$",
+      "answerType": "mathematica",
+      "tags": [
+        "Sec"
+      ],
+      "source": {
+        "file": "计算物理基础课程复习题库.md",
+        "section": "基础符号",
+        "item": 5,
+        "lineStart": 49,
+        "sha256": "9a2daf60b607e10afe5424030c01bcd6e7846fa6fea0b90de36de4c01f30632d"
+      },
+      "originalAnswer": "Sec[x]",
+      "originalSolution": "",
+      "variants": [
+        {
+          "id": "common",
+          "program": "Sec[x]",
+          "solution": "",
+          "note": "",
+          "revision": 1,
+          "verification": "source-checked"
+        }
+      ]
+    },
+    {
+      "id": "A-006",
+      "categoryId": "A",
+      "title": "函数 $\\arctan x$",
+      "prompt": "函数 $\\arctan x$",
+      "answerType": "mathematica",
+      "tags": [
+        "ArcTan"
+      ],
+      "source": {
+        "file": "计算物理基础课程复习题库.md",
+        "section": "基础符号",
+        "item": 6,
+        "lineStart": 50,
+        "sha256": "9a2daf60b607e10afe5424030c01bcd6e7846fa6fea0b90de36de4c01f30632d"
+      },
+      "originalAnswer": "ArcTan[x]",
+      "originalSolution": "",
+      "variants": [
+        {
+          "id": "common",
+          "program": "ArcTan[x]",
+          "solution": "",
+          "note": "",
+          "revision": 1,
+          "verification": "source-checked"
+        }
+      ]
+    },
+    {
+      "id": "A-007",
+      "categoryId": "A",
+      "title": "函数 $e^x$",
+      "prompt": "函数 $e^x$",
+      "answerType": "mathematica",
+      "tags": [
+        "Exp"
+      ],
+      "source": {
+        "file": "计算物理基础课程复习题库.md",
+        "section": "基础符号",
+        "item": 7,
+        "lineStart": 51,
+        "sha256": "9a2daf60b607e10afe5424030c01bcd6e7846fa6fea0b90de36de4c01f30632d"
+      },
+      "originalAnswer": "Exp[x]",
+      "originalSolution": "",
+      "variants": [
+        {
+          "id": "common",
+          "program": "Exp[x]",
+          "solution": "",
+          "note": "",
+          "revision": 1,
+          "verification": "source-checked"
+        }
+      ]
+    },
+    {
+      "id": "A-008",
+      "categoryId": "A",
+      "title": "函数 $\\ln x$",
+      "prompt": "函数 $\\ln x$",
+      "answerType": "mathematica",
+      "tags": [
+        "Log"
+      ],
+      "source": {
+        "file": "计算物理基础课程复习题库.md",
+        "section": "基础符号",
+        "item": 8,
+        "lineStart": 52,
+        "sha256": "9a2daf60b607e10afe5424030c01bcd6e7846fa6fea0b90de36de4c01f30632d"
+      },
+      "originalAnswer": "Log[x]",
+      "originalSolution": "",
+      "variants": [
+        {
+          "id": "common",
+          "program": "Log[x]",
+          "solution": "",
+          "note": "",
+          "revision": 1,
+          "verification": "source-checked"
+        }
+      ]
+    },
+    {
+      "id": "A-009",
+      "categoryId": "A",
+      "title": "函数 $\\log_x y$",
+      "prompt": "函数 $\\log_x y$",
+      "answerType": "mathematica",
+      "tags": [
+        "Log"
+      ],
+      "source": {
+        "file": "计算物理基础课程复习题库.md",
+        "section": "基础符号",
+        "item": 9,
+        "lineStart": 53,
+        "sha256": "9a2daf60b607e10afe5424030c01bcd6e7846fa6fea0b90de36de4c01f30632d"
+      },
+      "originalAnswer": "Log[x, y]",
+      "originalSolution": "",
+      "variants": [
+        {
+          "id": "common",
+          "program": "Log[x, y]",
+          "solution": "",
+          "note": "",
+          "revision": 1,
+          "verification": "source-checked"
+        }
+      ]
+    },
+    {
+      "id": "A-010",
+      "categoryId": "A",
+      "title": "函数 $\\sqrt{x}$",
+      "prompt": "函数 $\\sqrt{x}$",
+      "answerType": "mathematica",
+      "tags": [
+        "Sqrt"
+      ],
+      "source": {
+        "file": "计算物理基础课程复习题库.md",
+        "section": "基础符号",
+        "item": 10,
+        "lineStart": 54,
+        "sha256": "9a2daf60b607e10afe5424030c01bcd6e7846fa6fea0b90de36de4c01f30632d"
+      },
+      "originalAnswer": "Sqrt[x]",
+      "originalSolution": "",
+      "variants": [
+        {
+          "id": "common",
+          "program": "Sqrt[x]",
+          "solution": "",
+          "note": "",
+          "revision": 1,
+          "verification": "source-checked"
+        }
+      ]
+    },
+    {
+      "id": "A-011",
+      "categoryId": "A",
+      "title": "复数 $x$ 的共轭",
+      "prompt": "复数 $x$ 的共轭",
+      "answerType": "mathematica",
+      "tags": [
+        "Conjugate"
+      ],
+      "source": {
+        "file": "计算物理基础课程复习题库.md",
+        "section": "基础符号",
+        "item": 11,
+        "lineStart": 55,
+        "sha256": "9a2daf60b607e10afe5424030c01bcd6e7846fa6fea0b90de36de4c01f30632d"
+      },
+      "originalAnswer": "Conjugate[x]",
+      "originalSolution": "",
+      "variants": [
+        {
+          "id": "common",
+          "program": "Conjugate[x]",
+          "solution": "",
+          "note": "",
+          "revision": 1,
+          "verification": "source-checked"
+        }
+      ]
+    },
+    {
+      "id": "A-012",
+      "categoryId": "A",
+      "title": "组合数 $\\binom{n}{k}$",
+      "prompt": "组合数 $\\binom{n}{k}$",
+      "answerType": "mathematica",
+      "tags": [
+        "Binomial"
+      ],
+      "source": {
+        "file": "计算物理基础课程复习题库.md",
+        "section": "基础符号",
+        "item": 12,
+        "lineStart": 56,
+        "sha256": "9a2daf60b607e10afe5424030c01bcd6e7846fa6fea0b90de36de4c01f30632d"
+      },
+      "originalAnswer": "Binomial[n, k]",
+      "originalSolution": "",
+      "variants": [
+        {
+          "id": "common",
+          "program": "Binomial[n, k]",
+          "solution": "",
+          "note": "",
+          "revision": 1,
+          "verification": "source-checked"
+        }
+      ]
+    },
+    {
+      "id": "A-013",
+      "categoryId": "A",
+      "title": "复数 $x$ 的幅角",
+      "prompt": "复数 $x$ 的幅角",
+      "answerType": "mathematica",
+      "tags": [
+        "Arg"
+      ],
+      "source": {
+        "file": "计算物理基础课程复习题库.md",
+        "section": "基础符号",
+        "item": 13,
+        "lineStart": 57,
+        "sha256": "9a2daf60b607e10afe5424030c01bcd6e7846fa6fea0b90de36de4c01f30632d"
+      },
+      "originalAnswer": "Arg[x]",
+      "originalSolution": "",
+      "variants": [
+        {
+          "id": "common",
+          "program": "Arg[x]",
+          "solution": "",
+          "note": "",
+          "revision": 1,
+          "verification": "source-checked"
+        }
+      ]
+    },
+    {
+      "id": "A-014",
+      "categoryId": "A",
+      "title": "求和 $\\displaystyle\\sum_{i=1}^{10}i$",
+      "prompt": "求和 $\\displaystyle\\sum_{i=1}^{10}i$",
+      "answerType": "mathematica",
+      "tags": [
+        "Sum"
+      ],
+      "source": {
+        "file": "计算物理基础课程复习题库.md",
+        "section": "基础符号",
+        "item": 14,
+        "lineStart": 58,
+        "sha256": "9a2daf60b607e10afe5424030c01bcd6e7846fa6fea0b90de36de4c01f30632d"
+      },
+      "originalAnswer": "Sum[i, {i, 1, 10}]",
+      "originalSolution": "",
+      "variants": [
+        {
+          "id": "common",
+          "program": "Sum[i, {i, 1, 10}]",
+          "solution": "",
+          "note": "",
+          "revision": 1,
+          "verification": "source-checked"
+        }
+      ]
+    },
+    {
+      "id": "A-015",
+      "categoryId": "A",
+      "title": "化简 $\\displaystyle\\frac{x^2-1}{x-1}$",
+      "prompt": "化简 $\\displaystyle\\frac{x^2-1}{x-1}$",
+      "answerType": "mathematica",
+      "tags": [
+        "Simplify"
+      ],
+      "source": {
+        "file": "计算物理基础课程复习题库.md",
+        "section": "基础符号",
+        "item": 15,
+        "lineStart": 59,
+        "sha256": "9a2daf60b607e10afe5424030c01bcd6e7846fa6fea0b90de36de4c01f30632d"
+      },
+      "originalAnswer": "Simplify[(x^2-1)/(x-1)]",
+      "originalSolution": "",
+      "variants": [
+        {
+          "id": "common",
+          "program": "Simplify[(x^2-1)/(x-1)]",
+          "solution": "",
+          "note": "",
+          "revision": 1,
+          "verification": "source-checked"
+        }
+      ]
+    },
+    {
+      "id": "A-016",
+      "categoryId": "A",
+      "title": "分解因式（原题表达式）$\\displaystyle\\frac{x-3}{x-1}$",
+      "prompt": "分解因式（原题表达式）$\\displaystyle\\frac{x-3}{x-1}$",
+      "answerType": "mathematica",
+      "tags": [
+        "Factor"
+      ],
+      "source": {
+        "file": "计算物理基础课程复习题库.md",
+        "section": "基础符号",
+        "item": 16,
+        "lineStart": 60,
+        "sha256": "9a2daf60b607e10afe5424030c01bcd6e7846fa6fea0b90de36de4c01f30632d"
+      },
+      "originalAnswer": "Factor[(x-3)/(x-1)]",
+      "originalSolution": "",
+      "variants": [
+        {
+          "id": "common",
+          "program": "Factor[(x-3)/(x-1)]",
+          "solution": "",
+          "note": "",
+          "revision": 1,
+          "verification": "source-checked"
+        }
+      ]
+    },
+    {
+      "id": "A-017",
+      "categoryId": "A",
+      "title": "展开三角函数 $\\cos(2x)$",
+      "prompt": "展开三角函数 $\\cos(2x)$",
+      "answerType": "mathematica",
+      "tags": [
+        "TrigExpand",
+        "Cos"
+      ],
+      "source": {
+        "file": "计算物理基础课程复习题库.md",
+        "section": "基础符号",
+        "item": 17,
+        "lineStart": 61,
+        "sha256": "9a2daf60b607e10afe5424030c01bcd6e7846fa6fea0b90de36de4c01f30632d"
+      },
+      "originalAnswer": "TrigExpand[Cos[2x]]",
+      "originalSolution": "",
+      "variants": [
+        {
+          "id": "common",
+          "program": "TrigExpand[Cos[2x]]",
+          "solution": "",
+          "note": "",
+          "revision": 1,
+          "verification": "source-checked"
+        }
+      ]
+    },
+    {
+      "id": "A-018",
+      "categoryId": "A",
+      "title": "将 $\\sin x$ 展开成指数函数",
+      "prompt": "将 $\\sin x$ 展开成指数函数",
+      "answerType": "mathematica",
+      "tags": [
+        "TrigToExp",
+        "Sin"
+      ],
+      "source": {
+        "file": "计算物理基础课程复习题库.md",
+        "section": "基础符号",
+        "item": 18,
+        "lineStart": 62,
+        "sha256": "9a2daf60b607e10afe5424030c01bcd6e7846fa6fea0b90de36de4c01f30632d"
+      },
+      "originalAnswer": "TrigToExp[Sin[x]]",
+      "originalSolution": "",
+      "variants": [
+        {
+          "id": "common",
+          "program": "TrigToExp[Sin[x]]",
+          "solution": "",
+          "note": "",
+          "revision": 1,
+          "verification": "source-checked"
+        }
+      ]
+    },
+    {
+      "id": "A-019",
+      "categoryId": "A",
+      "title": "将 $e^{ix}$ 展开为三角函数",
+      "prompt": "将 $e^{ix}$ 展开为三角函数",
+      "answerType": "mathematica",
+      "tags": [
+        "ExpToTrig",
+        "Exp"
+      ],
+      "source": {
+        "file": "计算物理基础课程复习题库.md",
+        "section": "基础符号",
+        "item": 19,
+        "lineStart": 63,
+        "sha256": "9a2daf60b607e10afe5424030c01bcd6e7846fa6fea0b90de36de4c01f30632d"
+      },
+      "originalAnswer": "ExpToTrig[Exp[I x]]",
+      "originalSolution": "",
+      "variants": [
+        {
+          "id": "common",
+          "program": "ExpToTrig[Exp[I x]]",
+          "solution": "",
+          "note": "",
+          "revision": 1,
+          "verification": "source-checked"
+        }
+      ]
+    },
+    {
+      "id": "A-020",
+      "categoryId": "A",
+      "title": "实数 $2x$ 的绝对值",
+      "prompt": "实数 $2x$ 的绝对值",
+      "answerType": "mathematica",
+      "tags": [
+        "Abs"
+      ],
+      "source": {
+        "file": "计算物理基础课程复习题库.md",
+        "section": "基础符号",
+        "item": 20,
+        "lineStart": 64,
+        "sha256": "9a2daf60b607e10afe5424030c01bcd6e7846fa6fea0b90de36de4c01f30632d"
+      },
+      "originalAnswer": "Abs[2x]",
+      "originalSolution": "",
+      "variants": [
+        {
+          "id": "common",
+          "program": "Abs[2x]",
+          "solution": "",
+          "note": "",
+          "revision": 1,
+          "verification": "source-checked"
+        }
+      ]
+    },
+    {
+      "id": "A-021",
+      "categoryId": "A",
+      "title": "找出 $(x,y,z)$ 中的最大值",
+      "prompt": "找出 $(x,y,z)$ 中的最大值",
+      "answerType": "mathematica",
+      "tags": [
+        "Max"
+      ],
+      "source": {
+        "file": "计算物理基础课程复习题库.md",
+        "section": "基础符号",
+        "item": 21,
+        "lineStart": 65,
+        "sha256": "9a2daf60b607e10afe5424030c01bcd6e7846fa6fea0b90de36de4c01f30632d"
+      },
+      "originalAnswer": "Max[x, y, z]",
+      "originalSolution": "",
+      "variants": [
+        {
+          "id": "common",
+          "program": "Max[x, y, z]",
+          "solution": "",
+          "note": "",
+          "revision": 1,
+          "verification": "source-checked"
+        }
+      ]
+    },
+    {
+      "id": "A-022",
+      "categoryId": "A",
+      "title": "找出 $(x,y,z)$ 中的最小值",
+      "prompt": "找出 $(x,y,z)$ 中的最小值",
+      "answerType": "mathematica",
+      "tags": [
+        "Min"
+      ],
+      "source": {
+        "file": "计算物理基础课程复习题库.md",
+        "section": "基础符号",
+        "item": 22,
+        "lineStart": 66,
+        "sha256": "9a2daf60b607e10afe5424030c01bcd6e7846fa6fea0b90de36de4c01f30632d"
+      },
+      "originalAnswer": "Min[x, y, z]",
+      "originalSolution": "",
+      "variants": [
+        {
+          "id": "common",
+          "program": "Min[x, y, z]",
+          "solution": "",
+          "note": "",
+          "revision": 1,
+          "verification": "source-checked"
+        }
+      ]
+    },
+    {
+      "id": "A-023",
+      "categoryId": "A",
+      "title": "求复数 $a+ib$ 的实部",
+      "prompt": "求复数 $a+ib$ 的实部",
+      "answerType": "mathematica",
+      "tags": [
+        "Re"
+      ],
+      "source": {
+        "file": "计算物理基础课程复习题库.md",
+        "section": "基础符号",
+        "item": 23,
+        "lineStart": 67,
+        "sha256": "9a2daf60b607e10afe5424030c01bcd6e7846fa6fea0b90de36de4c01f30632d"
+      },
+      "originalAnswer": "Re[a+ib]",
+      "originalSolution": "",
+      "variants": [
+        {
+          "id": "common",
+          "program": "Re[a + I b]",
+          "solution": "",
+          "note": "ib 是单个符号；虚数单位使用大写 I。",
+          "revision": 2,
+          "verification": "kernel-verified"
+        }
+      ]
+    },
+    {
+      "id": "A-024",
+      "categoryId": "A",
+      "title": "求复数 $a+ib$ 的虚部",
+      "prompt": "求复数 $a+ib$ 的虚部",
+      "answerType": "mathematica",
+      "tags": [
+        "Im"
+      ],
+      "source": {
+        "file": "计算物理基础课程复习题库.md",
+        "section": "基础符号",
+        "item": 24,
+        "lineStart": 68,
+        "sha256": "9a2daf60b607e10afe5424030c01bcd6e7846fa6fea0b90de36de4c01f30632d"
+      },
+      "originalAnswer": "Im[a+ib]",
+      "originalSolution": "",
+      "variants": [
+        {
+          "id": "common",
+          "program": "Im[a + I b]",
+          "solution": "",
+          "note": "ib 是单个符号；虚数单位使用大写 I。",
+          "revision": 2,
+          "verification": "kernel-verified"
+        }
+      ]
+    },
+    {
+      "id": "A-025",
+      "categoryId": "A",
+      "title": "化简 $\\displaystyle\\frac{x^2-1}{x+1}$",
+      "prompt": "化简 $\\displaystyle\\frac{x^2-1}{x+1}$",
+      "answerType": "mathematica",
+      "tags": [
+        "Simplify"
+      ],
+      "source": {
+        "file": "计算物理基础课程复习题库.md",
+        "section": "基础符号",
+        "item": 25,
+        "lineStart": 69,
+        "sha256": "9a2daf60b607e10afe5424030c01bcd6e7846fa6fea0b90de36de4c01f30632d"
+      },
+      "originalAnswer": "Simplify[(x^2-1)/(x+1)]",
+      "originalSolution": "",
+      "variants": [
+        {
+          "id": "common",
+          "program": "Simplify[(x^2-1)/(x+1)]",
+          "solution": "",
+          "note": "",
+          "revision": 1,
+          "verification": "source-checked"
+        }
+      ]
+    },
+    {
+      "id": "A-026",
+      "categoryId": "A",
+      "title": "展开 $(x-1)^2$",
+      "prompt": "展开 $(x-1)^2$",
+      "answerType": "mathematica",
+      "tags": [
+        "Expand"
+      ],
+      "source": {
+        "file": "计算物理基础课程复习题库.md",
+        "section": "基础符号",
+        "item": 26,
+        "lineStart": 70,
+        "sha256": "9a2daf60b607e10afe5424030c01bcd6e7846fa6fea0b90de36de4c01f30632d"
+      },
+      "originalAnswer": "Expand[(x-1)^2]",
+      "originalSolution": "",
+      "variants": [
+        {
+          "id": "common",
+          "program": "Expand[(x-1)^2]",
+          "solution": "",
+          "note": "",
+          "revision": 1,
+          "verification": "source-checked"
+        }
+      ]
+    },
+    {
+      "id": "A-027",
+      "categoryId": "A",
+      "title": "对 $x^2-1$ 分解因式",
+      "prompt": "对 $x^2-1$ 分解因式",
+      "answerType": "mathematica",
+      "tags": [
+        "Factor"
+      ],
+      "source": {
+        "file": "计算物理基础课程复习题库.md",
+        "section": "基础符号",
+        "item": 27,
+        "lineStart": 71,
+        "sha256": "9a2daf60b607e10afe5424030c01bcd6e7846fa6fea0b90de36de4c01f30632d"
+      },
+      "originalAnswer": "Factor[x^2-1]",
+      "originalSolution": "",
+      "variants": [
+        {
+          "id": "common",
+          "program": "Factor[x^2-1]",
+          "solution": "",
+          "note": "",
+          "revision": 1,
+          "verification": "source-checked"
+        }
+      ]
+    },
+    {
+      "id": "B-001",
+      "categoryId": "B",
+      "title": "求方程 $ax+b=0$",
+      "prompt": "求方程 $ax+b=0$\n\n",
+      "answerType": "mathematica",
+      "tags": [
+        "Solve"
+      ],
+      "source": {
+        "file": "计算物理基础课程复习题库.md",
+        "section": "求解题",
+        "item": 1,
+        "lineStart": 75,
+        "sha256": "9a2daf60b607e10afe5424030c01bcd6e7846fa6fea0b90de36de4c01f30632d"
+      },
+      "originalAnswer": "Solve[a x + b == 0, x]",
+      "originalSolution": "",
+      "variants": [
+        {
+          "id": "common",
+          "program": "Solve[a x + b == 0, x]",
+          "solution": "",
+          "note": "",
+          "revision": 1,
+          "verification": "source-checked"
+        }
+      ]
+    },
+    {
+      "id": "B-002",
+      "categoryId": "B",
+      "title": "消除方程组中的变量 $z$",
+      "prompt": "消除方程组中的变量 $z$\n\n$$\n\\begin{cases}\nax+by-z=0,\\\\\ncx+dz-10=0.\n\\end{cases}\n$$",
+      "answerType": "mathematica",
+      "tags": [
+        "Eliminate"
+      ],
+      "source": {
+        "file": "计算物理基础课程复习题库.md",
+        "section": "求解题",
+        "item": 2,
+        "lineStart": 81,
+        "sha256": "9a2daf60b607e10afe5424030c01bcd6e7846fa6fea0b90de36de4c01f30632d"
+      },
+      "originalAnswer": "Eliminate[{a x + b y - z == 0, c x + d z - 10 == 0}, z]",
+      "originalSolution": "",
+      "variants": [
+        {
+          "id": "common",
+          "program": "Eliminate[{a x + b y - z == 0, c x + d z - 10 == 0}, z]",
+          "solution": "",
+          "note": "",
+          "revision": 1,
+          "verification": "source-checked"
+        }
+      ]
+    },
+    {
+      "id": "B-003",
+      "categoryId": "B",
+      "title": "求解不等式 $5x+6\\geq 0$",
+      "prompt": "求解不等式 $5x+6\\geq 0$\n\n",
+      "answerType": "mathematica",
+      "tags": [
+        "Reduce"
+      ],
+      "source": {
+        "file": "计算物理基础课程复习题库.md",
+        "section": "求解题",
+        "item": 3,
+        "lineStart": 94,
+        "sha256": "9a2daf60b607e10afe5424030c01bcd6e7846fa6fea0b90de36de4c01f30632d"
+      },
+      "originalAnswer": "Reduce[5 x + 6 >= 0]",
+      "originalSolution": "",
+      "variants": [
+        {
+          "id": "common",
+          "program": "Reduce[5 x + 6 >= 0]",
+          "solution": "",
+          "note": "",
+          "revision": 1,
+          "verification": "source-checked"
+        }
+      ]
+    },
+    {
+      "id": "B-004",
+      "categoryId": "B",
+      "title": "求 $\\displaystyle\\frac{\\sin 2x}{\\sin 5x}$ 在 $x\\to0$ 时的极限",
+      "prompt": "求 $\\displaystyle\\frac{\\sin 2x}{\\sin 5x}$ 在 $x\\to0$ 时的极限\n\n",
+      "answerType": "mathematica",
+      "tags": [
+        "Limit",
+        "Sin"
+      ],
+      "source": {
+        "file": "计算物理基础课程复习题库.md",
+        "section": "求解题",
+        "item": 4,
+        "lineStart": 100,
+        "sha256": "9a2daf60b607e10afe5424030c01bcd6e7846fa6fea0b90de36de4c01f30632d"
+      },
+      "originalAnswer": "Limit[Sin[2 x]/Sin[5 x], x -> 0]",
+      "originalSolution": "",
+      "variants": [
+        {
+          "id": "common",
+          "program": "Limit[Sin[2 x]/Sin[5 x], x -> 0]",
+          "solution": "",
+          "note": "",
+          "revision": 1,
+          "verification": "source-checked"
+        }
+      ]
+    },
+    {
+      "id": "B-005",
+      "categoryId": "B",
+      "title": "求 $f=ax+bx^2+c$ 关于 $x$ 的偏微分",
+      "prompt": "求 $f=ax+bx^2+c$ 关于 $x$ 的偏微分\n\n",
+      "answerType": "mathematica",
+      "tags": [],
+      "source": {
+        "file": "计算物理基础课程复习题库.md",
+        "section": "求解题",
+        "item": 5,
+        "lineStart": 106,
+        "sha256": "9a2daf60b607e10afe5424030c01bcd6e7846fa6fea0b90de36de4c01f30632d"
+      },
+      "originalAnswer": "D[a x + b x^2 + c, x]",
+      "originalSolution": "",
+      "variants": [
+        {
+          "id": "common",
+          "program": "D[a x + b x^2 + c, x]",
+          "solution": "",
+          "note": "",
+          "revision": 1,
+          "verification": "source-checked"
+        }
+      ]
+    },
+    {
+      "id": "B-006",
+      "categoryId": "B",
+      "title": "求 $f=ax+bx^2+cy$ 关于 $x$ 的全微分",
+      "prompt": "求 $f=ax+bx^2+cy$ 关于 $x$ 的全微分\n\n",
+      "answerType": "mathematica",
+      "tags": [
+        "Dt"
+      ],
+      "source": {
+        "file": "计算物理基础课程复习题库.md",
+        "section": "求解题",
+        "item": 6,
+        "lineStart": 112,
+        "sha256": "9a2daf60b607e10afe5424030c01bcd6e7846fa6fea0b90de36de4c01f30632d"
+      },
+      "originalAnswer": "Dt[a x + b x^2 + c y, x]",
+      "originalSolution": "",
+      "variants": [
+        {
+          "id": "common",
+          "program": "Dt[a x + b x^2 + c y, x]",
+          "solution": "",
+          "note": "",
+          "revision": 1,
+          "verification": "source-checked"
+        }
+      ]
+    },
+    {
+      "id": "B-007",
+      "categoryId": "B",
+      "title": "求 $f=2x+3x^2+4$ 关于 $x$ 的不定积分",
+      "prompt": "求 $f=2x+3x^2+4$ 关于 $x$ 的不定积分\n\n",
+      "answerType": "mathematica",
+      "tags": [
+        "Integrate"
+      ],
+      "source": {
+        "file": "计算物理基础课程复习题库.md",
+        "section": "求解题",
+        "item": 7,
+        "lineStart": 118,
+        "sha256": "9a2daf60b607e10afe5424030c01bcd6e7846fa6fea0b90de36de4c01f30632d"
+      },
+      "originalAnswer": "Integrate[2 x + 3 x^2 + 4, x]",
+      "originalSolution": "",
+      "variants": [
+        {
+          "id": "common",
+          "program": "Integrate[2 x + 3 x^2 + 4, x]",
+          "solution": "",
+          "note": "",
+          "revision": 1,
+          "verification": "source-checked"
+        }
+      ]
+    },
+    {
+      "id": "B-008",
+      "categoryId": "B",
+      "title": "求 $f=2x+3x^2+4$ 在 $1\\leq x\\leq2$ 的定积分",
+      "prompt": "求 $f=2x+3x^2+4$ 在 $1\\leq x\\leq2$ 的定积分\n\n",
+      "answerType": "mathematica",
+      "tags": [
+        "Integrate"
+      ],
+      "source": {
+        "file": "计算物理基础课程复习题库.md",
+        "section": "求解题",
+        "item": 8,
+        "lineStart": 124,
+        "sha256": "9a2daf60b607e10afe5424030c01bcd6e7846fa6fea0b90de36de4c01f30632d"
+      },
+      "originalAnswer": "Integrate[2 x + 3 x^2 + 4, {x, 1, 2}]",
+      "originalSolution": "",
+      "variants": [
+        {
+          "id": "common",
+          "program": "Integrate[2 x + 3 x^2 + 4, {x, 1, 2}]",
+          "solution": "",
+          "note": "",
+          "revision": 1,
+          "verification": "source-checked"
+        }
+      ]
+    },
+    {
+      "id": "B-009",
+      "categoryId": "B",
+      "title": "求无穷级数",
+      "prompt": "求无穷级数\n\n$$\n\\sum_{k=1}^{\\infty}\\frac{1}{k^2}\n$$",
+      "answerType": "mathematica",
+      "tags": [
+        "Sum"
+      ],
+      "source": {
+        "file": "计算物理基础课程复习题库.md",
+        "section": "求解题",
+        "item": 9,
+        "lineStart": 130,
+        "sha256": "9a2daf60b607e10afe5424030c01bcd6e7846fa6fea0b90de36de4c01f30632d"
+      },
+      "originalAnswer": "Sum[1/k^2, {k, 1, Infinity}]",
+      "originalSolution": "",
+      "variants": [
+        {
+          "id": "common",
+          "program": "Sum[1/k^2, {k, 1, Infinity}]",
+          "solution": "",
+          "note": "",
+          "revision": 1,
+          "verification": "source-checked"
+        }
+      ]
+    },
+    {
+      "id": "B-010",
+      "categoryId": "B",
+      "title": "求连乘",
+      "prompt": "求连乘\n\n$$\n\\prod_{i=1}^{5}(2i^2+4)\n$$",
+      "answerType": "mathematica",
+      "tags": [
+        "Product"
+      ],
+      "source": {
+        "file": "计算物理基础课程复习题库.md",
+        "section": "求解题",
+        "item": 10,
+        "lineStart": 140,
+        "sha256": "9a2daf60b607e10afe5424030c01bcd6e7846fa6fea0b90de36de4c01f30632d"
+      },
+      "originalAnswer": "Product[2 i^2 + 4, {i, 1, 5}]",
+      "originalSolution": "",
+      "variants": [
+        {
+          "id": "common",
+          "program": "Product[2 i^2 + 4, {i, 1, 5}]",
+          "solution": "",
+          "note": "",
+          "revision": 1,
+          "verification": "source-checked"
+        }
+      ]
+    },
+    {
+      "id": "B-011",
+      "categoryId": "B",
+      "title": "求 $\\arcsin x$ 在 $x_0=1$ 处展开到第 9 项的幂级数",
+      "prompt": "求 $\\arcsin x$ 在 $x_0=1$ 处展开到第 9 项的幂级数\n\n",
+      "answerType": "mathematica",
+      "tags": [
+        "Series",
+        "ArcSin"
+      ],
+      "source": {
+        "file": "计算物理基础课程复习题库.md",
+        "section": "求解题",
+        "item": 11,
+        "lineStart": 150,
+        "sha256": "9a2daf60b607e10afe5424030c01bcd6e7846fa6fea0b90de36de4c01f30632d"
+      },
+      "originalAnswer": "Series[ArcSin[x], {x, 1, 9}]",
+      "originalSolution": "",
+      "variants": [
+        {
+          "id": "common",
+          "program": "Series[ArcSin[x], {x, 1, 8}]",
+          "solution": "",
+          "note": "核验说明：x=1 是分支点，不能作普通 Taylor 展开。本题按广义级数理解，常数计入，取前 9 个非零项。第三参数是阶数，此处取 8。",
+          "revision": 2,
+          "verification": "kernel-verified"
+        }
+      ]
+    },
+    {
+      "id": "B-012",
+      "categoryId": "B",
+      "title": "求微分方程及其条件",
+      "prompt": "求微分方程及其条件\n\n$$\ny''-y=1,\\qquad y'(0)=y'(1),\\qquad y(0)=1+y(1).\n$$",
+      "answerType": "mathematica",
+      "tags": [
+        "DSolve"
+      ],
+      "source": {
+        "file": "计算物理基础课程复习题库.md",
+        "section": "求解题",
+        "item": 12,
+        "lineStart": 156,
+        "sha256": "9a2daf60b607e10afe5424030c01bcd6e7846fa6fea0b90de36de4c01f30632d"
+      },
+      "originalAnswer": "DSolve[\n  {y''[x] - y[x] == 1, y'[0] == y'[1], y[0] == 1 + y[1]},\n  y[x], x\n]",
+      "originalSolution": "",
+      "variants": [
+        {
+          "id": "common",
+          "program": "DSolve[\n  {y''[x] - y[x] == 1, y'[0] == y'[1], y[0] == 1 + y[1]},\n  y[x], x\n]",
+          "solution": "",
+          "note": "",
+          "revision": 1,
+          "verification": "source-checked"
+        }
+      ]
+    },
+    {
+      "id": "B-013",
+      "categoryId": "B",
+      "title": "求函数的最大值",
+      "prompt": "求函数的最大值\n\n$$\nf(x)=1-(x-2)^{2/3}\n$$",
+      "answerType": "mathematica",
+      "tags": [
+        "Maximize"
+      ],
+      "source": {
+        "file": "计算物理基础课程复习题库.md",
+        "section": "求解题",
+        "item": 13,
+        "lineStart": 169,
+        "sha256": "9a2daf60b607e10afe5424030c01bcd6e7846fa6fea0b90de36de4c01f30632d"
+      },
+      "originalAnswer": "Maximize[1 - (x - 2)^(2/3), x]",
+      "originalSolution": "",
+      "variants": [
+        {
+          "id": "common",
+          "program": "Maximize[1 - ((x - 2)^2)^(1/3), x]",
+          "solution": "",
+          "note": "核验说明：按实数幂解释原式。最大值 1，在 x=2 取得。",
+          "revision": 2,
+          "verification": "kernel-verified"
+        }
+      ]
+    },
+    {
+      "id": "B-014",
+      "categoryId": "B",
+      "title": "求函数在给定区间内的最小值",
+      "prompt": "求函数在给定区间内的最小值\n\n$$\nf(x)=1-(x-2)^{2/3},\\qquad 1\\leq x\\leq3.\n$$",
+      "answerType": "mathematica",
+      "tags": [
+        "Minimize"
+      ],
+      "source": {
+        "file": "计算物理基础课程复习题库.md",
+        "section": "求解题",
+        "item": 14,
+        "lineStart": 179,
+        "sha256": "9a2daf60b607e10afe5424030c01bcd6e7846fa6fea0b90de36de4c01f30632d"
+      },
+      "originalAnswer": "Minimize[{1 - (x - 2)^(2/3), 1 <= x <= 3}, x]",
+      "originalSolution": "",
+      "variants": [
+        {
+          "id": "common",
+          "program": "Minimize[{1 - ((x - 2)^2)^(1/3), 1 <= x <= 3}, x]",
+          "solution": "",
+          "note": "核验说明：按实数幂解释原式。最小值 0，在 x=1 或 x=3 取得。",
+          "revision": 2,
+          "verification": "kernel-verified"
+        }
+      ]
+    },
+    {
+      "id": "B-015",
+      "categoryId": "B",
+      "title": "求两个矢量的点积",
+      "prompt": "求两个矢量的点积\n\n$$\n\\mathbf a=(1,2,3),\\qquad \\mathbf b=(2,4,5).\n$$",
+      "answerType": "mathematica",
+      "tags": [
+        "Dot"
+      ],
+      "source": {
+        "file": "计算物理基础课程复习题库.md",
+        "section": "求解题",
+        "item": 15,
+        "lineStart": 189,
+        "sha256": "9a2daf60b607e10afe5424030c01bcd6e7846fa6fea0b90de36de4c01f30632d"
+      },
+      "originalAnswer": "a = {1, 2, 3};\nb = {2, 4, 5};\nDot[a, b]",
+      "originalSolution": "",
+      "variants": [
+        {
+          "id": "common",
+          "program": "a = {1, 2, 3};\nb = {2, 4, 5};\nDot[a, b]",
+          "solution": "",
+          "note": "",
+          "revision": 1,
+          "verification": "source-checked"
+        }
+      ]
+    },
+    {
+      "id": "B-016",
+      "categoryId": "B",
+      "title": "求两个矢量的叉积",
+      "prompt": "求两个矢量的叉积\n\n$$\n\\mathbf a=(1,2,3),\\qquad \\mathbf b=(2,4,5).\n$$",
+      "answerType": "mathematica",
+      "tags": [
+        "Cross"
+      ],
+      "source": {
+        "file": "计算物理基础课程复习题库.md",
+        "section": "求解题",
+        "item": 16,
+        "lineStart": 201,
+        "sha256": "9a2daf60b607e10afe5424030c01bcd6e7846fa6fea0b90de36de4c01f30632d"
+      },
+      "originalAnswer": "a = {1, 2, 3};\nb = {2, 4, 5};\nCross[a, b]",
+      "originalSolution": "",
+      "variants": [
+        {
+          "id": "common",
+          "program": "a = {1, 2, 3};\nb = {2, 4, 5};\nCross[a, b]",
+          "solution": "",
+          "note": "",
+          "revision": 1,
+          "verification": "source-checked"
+        }
+      ]
+    },
+    {
+      "id": "B-017",
+      "categoryId": "B",
+      "title": "求矩阵 $a$ 的逆矩阵",
+      "prompt": "求矩阵 $a$ 的逆矩阵\n\n$$\na=\\begin{pmatrix}1&9\\\\2&3\\end{pmatrix}.\n$$",
+      "answerType": "mathematica",
+      "tags": [
+        "Inverse"
+      ],
+      "source": {
+        "file": "计算物理基础课程复习题库.md",
+        "section": "求解题",
+        "item": 17,
+        "lineStart": 213,
+        "sha256": "9a2daf60b607e10afe5424030c01bcd6e7846fa6fea0b90de36de4c01f30632d"
+      },
+      "originalAnswer": "a = {{1, 9}, {2, 3}};\nInverse[a]",
+      "originalSolution": "",
+      "variants": [
+        {
+          "id": "common",
+          "program": "a = {{1, 9}, {2, 3}};\nInverse[a]",
+          "solution": "",
+          "note": "",
+          "revision": 1,
+          "verification": "source-checked"
+        }
+      ]
+    },
+    {
+      "id": "B-018",
+      "categoryId": "B",
+      "title": "求矩阵 $b$ 的行列式",
+      "prompt": "求矩阵 $b$ 的行列式\n\n$$\nb=\\begin{pmatrix}3&5\\\\2&3\\end{pmatrix}.\n$$",
+      "answerType": "mathematica",
+      "tags": [
+        "Det"
+      ],
+      "source": {
+        "file": "计算物理基础课程复习题库.md",
+        "section": "求解题",
+        "item": 18,
+        "lineStart": 224,
+        "sha256": "9a2daf60b607e10afe5424030c01bcd6e7846fa6fea0b90de36de4c01f30632d"
+      },
+      "originalAnswer": "b = {{3, 5}, {2, 3}};\nDet[b]",
+      "originalSolution": "",
+      "variants": [
+        {
+          "id": "common",
+          "program": "b = {{3, 5}, {2, 3}};\nDet[b]",
+          "solution": "",
+          "note": "",
+          "revision": 1,
+          "verification": "source-checked"
+        }
+      ]
+    },
+    {
+      "id": "C-001",
+      "categoryId": "C",
+      "title": "绘制函数图形",
+      "prompt": "绘制函数图形\n\n$$\ny=\\sin\\left(2+\\cos(x+1)\\right),\\qquad -10\\leq x\\leq10.\n$$",
+      "answerType": "mathematica",
+      "tags": [
+        "Plot",
+        "Sin",
+        "Cos"
+      ],
+      "source": {
+        "file": "计算物理基础课程复习题库.md",
+        "section": "绘图题",
+        "item": 1,
+        "lineStart": 237,
+        "sha256": "9a2daf60b607e10afe5424030c01bcd6e7846fa6fea0b90de36de4c01f30632d"
+      },
+      "originalAnswer": "Plot[Sin[2 + Cos[x + 1]], {x, -10, 10}]",
+      "originalSolution": "",
+      "variants": [
+        {
+          "id": "common",
+          "program": "Plot[Sin[2 + Cos[x + 1]], {x, -10, 10}]",
+          "solution": "",
+          "note": "",
+          "revision": 1,
+          "verification": "source-checked"
+        }
+      ]
+    },
+    {
+      "id": "C-002",
+      "categoryId": "C",
+      "title": "绘制参数方程图形",
+      "prompt": "绘制参数方程图形\n\n$$\nx=\\cos^3t,\\qquad y=\\sin^3t,\\qquad 0\\leq t\\leq2\\pi.\n$$",
+      "answerType": "mathematica",
+      "tags": [
+        "ParametricPlot",
+        "Cos",
+        "Sin"
+      ],
+      "source": {
+        "file": "计算物理基础课程复习题库.md",
+        "section": "绘图题",
+        "item": 2,
+        "lineStart": 247,
+        "sha256": "9a2daf60b607e10afe5424030c01bcd6e7846fa6fea0b90de36de4c01f30632d"
+      },
+      "originalAnswer": "ParametricPlot[{Cos[t]^3, Sin[t]^3}, {t, 0, 2 Pi}]",
+      "originalSolution": "",
+      "variants": [
+        {
+          "id": "common",
+          "program": "ParametricPlot[{Cos[t]^3, Sin[t]^3}, {t, 0, 2 Pi}]",
+          "solution": "",
+          "note": "",
+          "revision": 1,
+          "verification": "source-checked"
+        }
+      ]
+    },
+    {
+      "id": "C-003",
+      "categoryId": "C",
+      "title": "绘制标量函数的等值线图",
+      "prompt": "绘制标量函数的等值线图\n\n$$\n\\varphi=x^2+y^2,\\qquad 0\\leq x,y\\leq2\\pi.\n$$",
+      "answerType": "mathematica",
+      "tags": [
+        "ContourPlot"
+      ],
+      "source": {
+        "file": "计算物理基础课程复习题库.md",
+        "section": "绘图题",
+        "item": 3,
+        "lineStart": 257,
+        "sha256": "9a2daf60b607e10afe5424030c01bcd6e7846fa6fea0b90de36de4c01f30632d"
+      },
+      "originalAnswer": "ContourPlot[x^2 + y^2, {x, 0, 2 Pi}, {y, 0, 2 Pi}]",
+      "originalSolution": "",
+      "variants": [
+        {
+          "id": "common",
+          "program": "ContourPlot[x^2 + y^2, {x, 0, 2 Pi}, {y, 0, 2 Pi}]",
+          "solution": "",
+          "note": "",
+          "revision": 1,
+          "verification": "source-checked"
+        }
+      ]
+    },
+    {
+      "id": "C-004",
+      "categoryId": "C",
+      "title": "绘制标量函数的密度图",
+      "prompt": "绘制标量函数的密度图\n\n$$\n\\varphi=x^2+y^2,\\qquad 0\\leq x,y\\leq2\\pi.\n$$",
+      "answerType": "mathematica",
+      "tags": [
+        "DensityPlot"
+      ],
+      "source": {
+        "file": "计算物理基础课程复习题库.md",
+        "section": "绘图题",
+        "item": 4,
+        "lineStart": 267,
+        "sha256": "9a2daf60b607e10afe5424030c01bcd6e7846fa6fea0b90de36de4c01f30632d"
+      },
+      "originalAnswer": "DensityPlot[x^2 + y^2, {x, 0, 2 Pi}, {y, 0, 2 Pi}]",
+      "originalSolution": "",
+      "variants": [
+        {
+          "id": "common",
+          "program": "DensityPlot[x^2 + y^2, {x, 0, 2 Pi}, {y, 0, 2 Pi}]",
+          "solution": "",
+          "note": "",
+          "revision": 1,
+          "verification": "source-checked"
+        }
+      ]
+    },
+    {
+      "id": "C-005",
+      "categoryId": "C",
+      "title": "绘制极坐标方程图形",
+      "prompt": "绘制极坐标方程图形\n\n$$\nr(t)=\\sin t+1,\\qquad 0\\leq t\\leq2\\pi.\n$$",
+      "answerType": "mathematica",
+      "tags": [
+        "PolarPlot",
+        "Sin"
+      ],
+      "source": {
+        "file": "计算物理基础课程复习题库.md",
+        "section": "绘图题",
+        "item": 5,
+        "lineStart": 277,
+        "sha256": "9a2daf60b607e10afe5424030c01bcd6e7846fa6fea0b90de36de4c01f30632d"
+      },
+      "originalAnswer": "<<Graphics`Graphics`\nPolarPlot[Sin[t] + 1, {t, 0, 2 Pi}]",
+      "originalSolution": "",
+      "variants": [
+        {
+          "id": "course",
+          "program": "<<Graphics`Graphics`\nPolarPlot[Sin[t] + 1, {t, 0, 2 Pi}]",
+          "solution": "",
+          "note": "课程旧版命令；需要相应旧版 Graphics 软件包。",
+          "revision": 1,
+          "verification": "documentation-checked"
+        },
+        {
+          "id": "modern",
+          "program": "PolarPlot[Sin[t] + 1, {t, 0, 2 Pi}]",
+          "solution": "",
+          "note": "使用现代内置命令。",
+          "revision": 1,
+          "verification": "documentation-checked"
+        }
+      ]
+    },
+    {
+      "id": "C-006",
+      "categoryId": "C",
+      "title": "绘制隐函数图形",
+      "prompt": "绘制隐函数图形\n\n$$\n(x^2+y^2)^2=x^2-y^2,\\qquad 0\\leq x\\leq2\\pi.\n$$",
+      "answerType": "mathematica",
+      "tags": [
+        "ImplicitPlot"
+      ],
+      "source": {
+        "file": "计算物理基础课程复习题库.md",
+        "section": "绘图题",
+        "item": 6,
+        "lineStart": 288,
+        "sha256": "9a2daf60b607e10afe5424030c01bcd6e7846fa6fea0b90de36de4c01f30632d"
+      },
+      "originalAnswer": "<<Graphics`ImplicitPlot`\nImplicitPlot[(x^2 + y^2)^2 == x^2 - y^2, {x, 0, 2 Pi}]",
+      "originalSolution": "",
+      "variants": [
+        {
+          "id": "course",
+          "program": "<<Graphics`ImplicitPlot`\nImplicitPlot[(x^2 + y^2)^2 == x^2 - y^2, {x, 0, 2 Pi}]",
+          "solution": "",
+          "note": "课程旧版命令；需要相应旧版 Graphics 软件包。",
+          "revision": 1,
+          "verification": "documentation-checked"
+        },
+        {
+          "id": "modern",
+          "program": "ContourPlot[(x^2 + y^2)^2 == x^2 - y^2, {x, 0, 2 Pi}, {y, -1, 1}]",
+          "solution": "",
+          "note": "核验补充：y∈[-1,1] 是覆盖完整曲线的显示窗口。",
+          "revision": 1,
+          "verification": "documentation-checked"
+        }
+      ]
+    },
+    {
+      "id": "C-007",
+      "categoryId": "C",
+      "title": "绘制三维函数图形",
+      "prompt": "绘制三维函数图形\n\n$$\nz=x^2+y^2,\\qquad 0\\leq x,y\\leq2\\pi.\n$$",
+      "answerType": "mathematica",
+      "tags": [],
+      "source": {
+        "file": "计算物理基础课程复习题库.md",
+        "section": "绘图题",
+        "item": 7,
+        "lineStart": 299,
+        "sha256": "9a2daf60b607e10afe5424030c01bcd6e7846fa6fea0b90de36de4c01f30632d"
+      },
+      "originalAnswer": "Plot3D[x^2 + y^2, {x, 0, 2 Pi}, {y, 0, 2 Pi}]",
+      "originalSolution": "",
+      "variants": [
+        {
+          "id": "common",
+          "program": "Plot3D[x^2 + y^2, {x, 0, 2 Pi}, {y, 0, 2 Pi}]",
+          "solution": "",
+          "note": "",
+          "revision": 1,
+          "verification": "source-checked"
+        }
+      ]
+    },
+    {
+      "id": "C-008",
+      "categoryId": "C",
+      "title": "绘制三维参数方程图形",
+      "prompt": "绘制三维参数方程图形\n\n$$\nx=\\cos^3t,\\quad y=\\sin^3t,\\quad z=t,\\quad 0\\leq t\\leq2\\pi.\n$$",
+      "answerType": "mathematica",
+      "tags": [
+        "Cos",
+        "Sin"
+      ],
+      "source": {
+        "file": "计算物理基础课程复习题库.md",
+        "section": "绘图题",
+        "item": 8,
+        "lineStart": 309,
+        "sha256": "9a2daf60b607e10afe5424030c01bcd6e7846fa6fea0b90de36de4c01f30632d"
+      },
+      "originalAnswer": "ParametricPlot3D[{Cos[t]^3, Sin[t]^3, t}, {t, 0, 2 Pi}]",
+      "originalSolution": "",
+      "variants": [
+        {
+          "id": "common",
+          "program": "ParametricPlot3D[{Cos[t]^3, Sin[t]^3, t}, {t, 0, 2 Pi}]",
+          "solution": "",
+          "note": "",
+          "revision": 1,
+          "verification": "source-checked"
+        }
+      ]
+    },
+    {
+      "id": "C-009",
+      "categoryId": "C",
+      "title": "绘制柱坐标函数图形",
+      "prompt": "绘制柱坐标函数图形\n\n$$\nz=r+\\sin^2\\theta,\\qquad 0\\leq r\\leq1,\\quad0\\leq\\theta\\leq2\\pi.\n$$",
+      "answerType": "mathematica",
+      "tags": [
+        "Sin"
+      ],
+      "source": {
+        "file": "计算物理基础课程复习题库.md",
+        "section": "绘图题",
+        "item": 9,
+        "lineStart": 319,
+        "sha256": "9a2daf60b607e10afe5424030c01bcd6e7846fa6fea0b90de36de4c01f30632d"
+      },
+      "originalAnswer": "<<Graphics`ParametricPlot3D`\nCylindricalPlot3D[r + Sin[t]^2, {r, 0, 1}, {t, 0, 2 Pi}]",
+      "originalSolution": "",
+      "variants": [
+        {
+          "id": "course",
+          "program": "<<Graphics`ParametricPlot3D`\nCylindricalPlot3D[r + Sin[t]^2, {r, 0, 1}, {t, 0, 2 Pi}]",
+          "solution": "",
+          "note": "课程旧版命令；需要相应旧版 Graphics 软件包。",
+          "revision": 1,
+          "verification": "documentation-checked"
+        },
+        {
+          "id": "modern",
+          "program": "ParametricPlot3D[{r Cos[t], r Sin[t], r + Sin[t]^2}, {r, 0, 1}, {t, 0, 2 Pi}]",
+          "solution": "",
+          "note": "使用现代内置命令。",
+          "revision": 1,
+          "verification": "documentation-checked"
+        }
+      ]
+    },
+    {
+      "id": "C-010",
+      "categoryId": "C",
+      "title": "绘制球坐标函数图形",
+      "prompt": "绘制球坐标函数图形\n\n原题给出的函数和范围为\n$$\nr=\\sin\\varphi+\\cos^2\\theta,\\qquad\n0\\leq\\varphi\\leq\\pi,\\quad0\\leq\\theta\\leq2\\pi.\n$$",
+      "answerType": "mathematica",
+      "tags": [
+        "Sin",
+        "Cos"
+      ],
+      "source": {
+        "file": "计算物理基础课程复习题库.md",
+        "section": "绘图题",
+        "item": 10,
+        "lineStart": 330,
+        "sha256": "9a2daf60b607e10afe5424030c01bcd6e7846fa6fea0b90de36de4c01f30632d"
+      },
+      "originalAnswer": "<<Graphics`ParametricPlot3D`\nSphericalPlot3D[Sin[r] + Cos[t]^2, {r, 0, Pi}, {t, 0, 2 Pi}]",
+      "originalSolution": "",
+      "variants": [
+        {
+          "id": "course",
+          "program": "<<Graphics`ParametricPlot3D`\nSphericalPlot3D[Sin[r] + Cos[t]^2, {r, 0, Pi}, {t, 0, 2 Pi}]",
+          "solution": "",
+          "note": "课程旧版命令；需要相应旧版 Graphics 软件包。",
+          "revision": 1,
+          "verification": "documentation-checked"
+        },
+        {
+          "id": "modern",
+          "program": "SphericalPlot3D[Sin[r] + Cos[t]^2, {r, 0, Pi}, {t, 0, 2 Pi}]",
+          "solution": "",
+          "note": "使用现代内置命令。",
+          "revision": 1,
+          "verification": "documentation-checked"
+        }
+      ]
+    },
+    {
+      "id": "C-011",
+      "categoryId": "C",
+      "title": "绘制二维矢量场",
+      "prompt": "绘制二维矢量场\n\n$$\n\\mathbf f(x,y)=\\cos x\\,\\mathbf i+\\sin y\\,\\mathbf j,\n\\qquad 0\\leq x,y\\leq\\pi.\n$$",
+      "answerType": "mathematica",
+      "tags": [
+        "PlotVectorField",
+        "Cos",
+        "Sin"
+      ],
+      "source": {
+        "file": "计算物理基础课程复习题库.md",
+        "section": "绘图题",
+        "item": 11,
+        "lineStart": 343,
+        "sha256": "9a2daf60b607e10afe5424030c01bcd6e7846fa6fea0b90de36de4c01f30632d"
+      },
+      "originalAnswer": "<<Graphics`PlotField`\nPlotVectorField[{Cos[x], Sin[y]}, {x, 0, Pi}, {y, 0, Pi}]",
+      "originalSolution": "",
+      "variants": [
+        {
+          "id": "course",
+          "program": "<<Graphics`PlotField`\nPlotVectorField[{Cos[x], Sin[y]}, {x, 0, Pi}, {y, 0, Pi}]",
+          "solution": "",
+          "note": "课程旧版命令；需要相应旧版 Graphics 软件包。",
+          "revision": 1,
+          "verification": "documentation-checked"
+        },
+        {
+          "id": "modern",
+          "program": "VectorPlot[{Cos[x], Sin[y]}, {x, 0, Pi}, {y, 0, Pi}]",
+          "solution": "",
+          "note": "使用现代内置命令。",
+          "revision": 1,
+          "verification": "documentation-checked"
+        }
+      ]
+    },
+    {
+      "id": "C-012",
+      "categoryId": "C",
+      "title": "绘制三维矢量场",
+      "prompt": "绘制三维矢量场\n\n$$\n\\mathbf f(x,y,z)=\\cos x\\,\\mathbf i+\\sin y\\,\\mathbf j+z\\,\\mathbf k,\n\\qquad 0\\leq x,y,z\\leq\\pi.\n$$",
+      "answerType": "mathematica",
+      "tags": [
+        "Cos",
+        "Sin"
+      ],
+      "source": {
+        "file": "计算物理基础课程复习题库.md",
+        "section": "绘图题",
+        "item": 12,
+        "lineStart": 355,
+        "sha256": "9a2daf60b607e10afe5424030c01bcd6e7846fa6fea0b90de36de4c01f30632d"
+      },
+      "originalAnswer": "<<Graphics`PlotField3D`\nPlotVectorField3D[\n  {Cos[x], Sin[y], z},\n  {x, 0, Pi}, {y, 0, Pi}, {z, 0, Pi}\n]",
+      "originalSolution": "",
+      "variants": [
+        {
+          "id": "course",
+          "program": "<<Graphics`PlotField3D`\nPlotVectorField3D[\n  {Cos[x], Sin[y], z},\n  {x, 0, Pi}, {y, 0, Pi}, {z, 0, Pi}\n]",
+          "solution": "",
+          "note": "课程旧版命令；需要相应旧版 Graphics 软件包。",
+          "revision": 1,
+          "verification": "documentation-checked"
+        },
+        {
+          "id": "modern",
+          "program": "VectorPlot3D[{Cos[x], Sin[y], z}, {x, 0, Pi}, {y, 0, Pi}, {z, 0, Pi}]",
+          "solution": "",
+          "note": "使用现代内置命令。",
+          "revision": 1,
+          "verification": "documentation-checked"
+        }
+      ]
+    },
+    {
+      "id": "C-013",
+      "categoryId": "C",
+      "title": "绘制标量函数的梯度场",
+      "prompt": "绘制标量函数的梯度场\n\n$$\nf(x,y)=x^2+y^2,\\qquad -3\\leq x,y\\leq3.\n$$",
+      "answerType": "mathematica",
+      "tags": [
+        "PlotGradientField"
+      ],
+      "source": {
+        "file": "计算物理基础课程复习题库.md",
+        "section": "绘图题",
+        "item": 13,
+        "lineStart": 370,
+        "sha256": "9a2daf60b607e10afe5424030c01bcd6e7846fa6fea0b90de36de4c01f30632d"
+      },
+      "originalAnswer": "PlotGradientField[x^2 + y^2, {x, -3, 3}, {y, -3, 3}]",
+      "originalSolution": "",
+      "variants": [
+        {
+          "id": "course",
+          "program": "<<Graphics`PlotField`\nPlotGradientField[x^2 + y^2, {x, -3, 3}, {y, -3, 3}]",
+          "solution": "",
+          "note": "课程旧版命令；需要相应旧版 Graphics 软件包。",
+          "revision": 1,
+          "verification": "documentation-checked"
+        },
+        {
+          "id": "modern",
+          "program": "VectorPlot[Evaluate[{D[x^2 + y^2, x], D[x^2 + y^2, y]}], {x, -3, 3}, {y, -3, 3}]",
+          "solution": "",
+          "note": "使用现代内置命令。",
+          "revision": 1,
+          "verification": "documentation-checked"
+        }
+      ]
+    },
+    {
+      "id": "C-014",
+      "categoryId": "C",
+      "title": "绘制二维不等式图形",
+      "prompt": "绘制二维不等式图形\n\n$$\nx^2+y^2\\leq2,\\qquad -3\\leq x,y\\leq3.\n$$",
+      "answerType": "mathematica",
+      "tags": [
+        "InequalityPlot"
+      ],
+      "source": {
+        "file": "计算物理基础课程复习题库.md",
+        "section": "绘图题",
+        "item": 14,
+        "lineStart": 380,
+        "sha256": "9a2daf60b607e10afe5424030c01bcd6e7846fa6fea0b90de36de4c01f30632d"
+      },
+      "originalAnswer": "<<Graphics`InequalityGraphics`\nInequalityPlot[x^2 + y^2 <= 2, {x, -3, 3}, {y, -3, 3}]",
+      "originalSolution": "",
+      "variants": [
+        {
+          "id": "course",
+          "program": "<<Graphics`InequalityGraphics`\nInequalityPlot[x^2 + y^2 <= 2, {x, -3, 3}, {y, -3, 3}]",
+          "solution": "",
+          "note": "课程旧版命令；需要相应旧版 Graphics 软件包。",
+          "revision": 1,
+          "verification": "documentation-checked"
+        },
+        {
+          "id": "modern",
+          "program": "RegionPlot[x^2 + y^2 <= 2, {x, -3, 3}, {y, -3, 3}]",
+          "solution": "",
+          "note": "官方命令；本机内核返回内部诊断，图形运行核验待复查。",
+          "revision": 1,
+          "verification": "documentation-checked"
+        }
+      ]
+    },
+    {
+      "id": "C-015",
+      "categoryId": "C",
+      "title": "绘制三维不等式图形",
+      "prompt": "绘制三维不等式图形\n\n$$\nx^2+y^2+2xz\\leq2,\\qquad -3\\leq x,y,z\\leq3.\n$$",
+      "answerType": "mathematica",
+      "tags": [],
+      "source": {
+        "file": "计算物理基础课程复习题库.md",
+        "section": "绘图题",
+        "item": 15,
+        "lineStart": 391,
+        "sha256": "9a2daf60b607e10afe5424030c01bcd6e7846fa6fea0b90de36de4c01f30632d"
+      },
+      "originalAnswer": "<<Graphics`InequalityGraphics`\nInequalityPlot3D[\n  x^2 + y^2 + 2 x z <= 2,\n  {x, -3, 3}, {y, -3, 3}, {z, -3, 3}\n]",
+      "originalSolution": "",
+      "variants": [
+        {
+          "id": "course",
+          "program": "<<Graphics`InequalityGraphics`\nInequalityPlot3D[\n  x^2 + y^2 + 2 x z <= 2,\n  {x, -3, 3}, {y, -3, 3}, {z, -3, 3}\n]",
+          "solution": "",
+          "note": "课程旧版命令；需要相应旧版 Graphics 软件包。",
+          "revision": 1,
+          "verification": "documentation-checked"
+        },
+        {
+          "id": "modern",
+          "program": "RegionPlot3D[x^2 + y^2 + 2 x z <= 2, {x, -3, 3}, {y, -3, 3}, {z, -3, 3}]",
+          "solution": "",
+          "note": "使用现代内置命令。",
+          "revision": 1,
+          "verification": "documentation-checked"
+        }
+      ]
+    },
+    {
+      "id": "D-001",
+      "categoryId": "D",
+      "title": "质点沿 $x$ 轴做直线运动",
+      "prompt": "质点沿 $x$ 轴做直线运动\n\n运动方程为\n$$\nx(t)=t^3+2t+4.\n$$\n\n求 $t=2\\,\\mathrm{s}$ 时的速度和加速度。",
+      "answerType": "self_assessment",
+      "tags": [],
+      "source": {
+        "file": "计算物理基础课程复习题库.md",
+        "section": "综合计算",
+        "item": 1,
+        "lineStart": 407,
+        "sha256": "9a2daf60b607e10afe5424030c01bcd6e7846fa6fea0b90de36de4c01f30632d"
+      },
+      "originalAnswer": "x = t^3 + 2 t + 4;\nv = D[x, t];\na = D[v, t];\nt = 2;\nv2 = v;\na2 = a;",
+      "originalSolution": "速度为\n$$\nv(t)=\\frac{\\mathrm dx}{\\mathrm dt}=3t^2+2.\n$$\n\n加速度为\n$$\na(t)=\\frac{\\mathrm dv}{\\mathrm dt}=6t.\n$$\n\n当 $t=2\\,\\mathrm{s}$ 时，\n$$\nv(2)=3\\times2^2+2=14,\\qquad a(2)=6\\times2=12.\n$$",
+      "variants": [
+        {
+          "id": "common",
+          "program": "x = t^3 + 2 t + 4;\nv = D[x, t];\na = D[v, t];\nt = 2;\nv2 = v;\na2 = a;",
+          "solution": "速度为\n$$\nv(t)=\\frac{\\mathrm dx}{\\mathrm dt}=3t^2+2.\n$$\n\n加速度为\n$$\na(t)=\\frac{\\mathrm dv}{\\mathrm dt}=6t.\n$$\n\n当 $t=2\\,\\mathrm{s}$ 时，\n$$\nv(2)=3\\times2^2+2=14,\\qquad a(2)=6\\times2=12.\n$$",
+          "note": "",
+          "revision": 1,
+          "verification": "source-checked"
+        }
+      ]
+    },
+    {
+      "id": "D-002",
+      "categoryId": "D",
+      "title": "圆形闭合导线中的感应电动势",
+      "prompt": "圆形闭合导线中的感应电动势\n\n一个圆形闭合导线放置在 $XOY$ 平面内，磁场沿 $Z$ 轴方向：\n$$\n\\mathbf B=(1+\\sqrt t)\\,\\mathbf k.\n$$\n\n圆形线圈半径随时间变化：\n$$\nr=t+t^2.\n$$\n\n求第 $2\\,\\mathrm{s}$ 时的感应电动势。",
+      "answerType": "self_assessment",
+      "tags": [
+        "Sqrt",
+        "Dot",
+        "Integrate",
+        "Simplify"
+      ],
+      "source": {
+        "file": "计算物理基础课程复习题库.md",
+        "section": "综合计算",
+        "item": 2,
+        "lineStart": 444,
+        "sha256": "9a2daf60b607e10afe5424030c01bcd6e7846fa6fea0b90de36de4c01f30632d"
+      },
+      "originalAnswer": "r = t + t^2;\ndr = D[r, t];\nds = {0, 0, r 2 Pi dr};\nb = {0, 0, 1 + Sqrt[t]};\ndPsi = Dot[b, ds];\nPsi = Integrate[dPsi, t];\nv = -D[Psi, t];\nt = 2;\nSimplify[v]",
+      "originalSolution": "由\n$$\nr=t+t^2\n$$\n可得\n$$\n\\frac{\\mathrm dr}{\\mathrm dt}=1+2t.\n$$\n\n圆形线圈的环形面积元为\n$$\n\\mathrm dS=2\\pi r\\,\\mathrm dr\n=2\\pi(t+t^2)(1+2t)\\,\\mathrm dt.\n$$\n\n磁通量元为\n$$\n\\mathrm d\\Psi=\\mathbf B\\cdot\\mathrm d\\mathbf S\n=2\\pi(1+\\sqrt t)(t+t^2)(1+2t)\\,\\mathrm dt.\n$$\n\n磁通量为\n$$\n\\begin{aligned}\n\\Psi\n&=\\int \\mathrm d\\Psi\\\\\n&=2\\pi\\left(\n\\frac{t^2}{2}\n+\\frac{2t^{5/2}}{5}\n+t^3\n+\\frac{6t^{7/2}}{7}\n+\\frac{t^4}{2}\n+\\frac{4t^{9/2}}{9}\n\\right).\n\\end{aligned}\n$$\n\n感应电动势为\n$$\n\\begin{aligned}\n\\varepsilon\n&=-\\frac{\\mathrm d\\Psi}{\\mathrm dt}\\\\\n&=-2\\pi\\left(\nt+t^{3/2}+3t^2+3t^{5/2}+2t^3+2t^{7/2}\n\\right).\n\\end{aligned}\n$$\n\n当 $t=2\\,\\mathrm{s}$ 时，\n$$\n\\varepsilon\n=\\left.-\\frac{\\mathrm d\\Psi}{\\mathrm dt}\\right|_{t=2}\n=-60(1+\\sqrt2)\\pi.\n$$",
+      "variants": [
+        {
+          "id": "common",
+          "program": "r = t + t^2;\nb = 1 + Sqrt[t];\nPsi = Pi r^2 b;\nv = -D[Psi, t];\nt = 2;\nSimplify[v]",
+          "solution": "核验说明：正向法线取 +Z。磁场随时间变化，磁通量应为 $\\Psi=\\pi(1+\\sqrt t)(t+t^2)^2$，感应电动势 $\\varepsilon=-d\\Psi/dt$，故 $\\varepsilon(2)=-3(20+23\\sqrt2)\\pi$。原稿遗漏磁场变化贡献。",
+          "note": "核验说明：正向法线取 +Z。磁场随时间变化，磁通量应为 $\\Psi=\\pi(1+\\sqrt t)(t+t^2)^2$，感应电动势 $\\varepsilon=-d\\Psi/dt$，故 $\\varepsilon(2)=-3(20+23\\sqrt2)\\pi$。原稿遗漏磁场变化贡献。",
+          "revision": 2,
+          "verification": "kernel-verified"
+        }
+      ]
+    }
+  ]
+}

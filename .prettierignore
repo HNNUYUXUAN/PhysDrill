@@ -1,0 +1,10 @@
+node_modules
+dist
+.local
+.playwright-cli
+output
+src/data/bank.json
+package-lock.json
+计算物理基础课程复习.md
+计算物理基础课程复习题库.md
+scripts/browser-*.cjs
