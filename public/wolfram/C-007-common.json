@@ -1,0 +1,12 @@
+{
+	"qid":"C-007",
+	"variant":"common",
+	"revision":1,
+	"program":"Plot3D[x^2 + y^2, {x, 0, 2 Pi}, {y, 0, 2 Pi}]",
+	"status":"evaluated",
+	"result":"Graphics3D",
+	"messages":[],
+	"image":"wolfram\/C-007-common.png",
+	"seconds":0.1532273,
+	"source":"wolfram\/questions\/C-007-common.wl"
+}

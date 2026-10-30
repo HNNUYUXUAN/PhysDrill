@@ -1,0 +1,12 @@
+{
+	"qid":"B-008",
+	"variant":"common",
+	"revision":1,
+	"program":"Integrate[2 x + 3 x^2 + 4, {x, 1, 2}]",
+	"status":"evaluated",
+	"result":"14",
+	"messages":[],
+	"image":"",
+	"seconds":8.3225e-3,
+	"source":"wolfram\/questions\/B-008-common.wl"
+}

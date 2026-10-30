@@ -6,6 +6,7 @@
   --line: #dedede;
   --paper: #fff;
   --accent: #315369;
+  --mark: #b4232c;
   font-family: "Times New Roman", SimSun, "Songti SC", serif;
   font-size: 18px;
   line-height: 1.8;
@@ -443,11 +444,11 @@ textarea::placeholder {
   margin: 5px 0;
 }
 .alert {
-  border: 1px solid #9d6a2b;
-  background: #fffaf1;
+  border: 1px solid var(--mark);
+  background: #fff;
   padding: 15px;
   margin: 20px 0;
-  color: #623f11;
+  color: var(--mark);
 }
 .paper-note {
   background: #fafafa;
@@ -467,7 +468,7 @@ textarea::placeholder {
   min-width: 120px;
 }
 .danger-text {
-  color: #963d32;
+  color: var(--mark);
 }
 .solution {
   font-size: 19px;
@@ -813,4 +814,53 @@ footer span {
   * {
     scroll-behavior: auto !important;
   }
+}
+
+/* Teacher marking: black writing, red reference, blue supporting notes. */
+.reference-answer .code {
+  color: var(--mark);
+  border-left: 3px solid var(--mark);
+}
+.reference-answer .code pre {
+  color: var(--mark);
+}
+.feedback {
+  padding: 14px 18px;
+  margin: 16px 0;
+  border-left: 3px solid currentColor;
+  background: #fafafa;
+}
+.feedback.correction,
+.diagnostic {
+  color: var(--mark);
+}
+.feedback.pass,
+.note,
+.explanation {
+  color: var(--accent);
+}
+.feedback p {
+  margin: 6px 0;
+}
+.wolfram-result img {
+  display: block;
+  width: 100%;
+  max-width: 900px;
+  height: auto;
+  margin: auto;
+}
+.wolfram-result figure {
+  margin: 16px 0;
+}
+.wolfram-result figcaption {
+  color: var(--muted);
+  font-size: 15px;
+}
+.kernel-output {
+  overflow-x: auto;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  font-size: 15px;
+  padding: 12px;
+  background: #fafafa;
 }

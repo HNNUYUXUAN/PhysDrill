@@ -1,0 +1,12 @@
+{
+	"qid":"B-016",
+	"variant":"common",
+	"revision":1,
+	"program":"a = {1, 2, 3};\nb = {2, 4, 5};\nCross[a, b]",
+	"status":"evaluated",
+	"result":"{-2, 1, 0}",
+	"messages":[],
+	"image":"",
+	"seconds":3.634e-4,
+	"source":"wolfram\/questions\/B-016-common.wl"
+}

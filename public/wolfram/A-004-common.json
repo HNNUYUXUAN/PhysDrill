@@ -1,0 +1,12 @@
+{
+	"qid":"A-004",
+	"variant":"common",
+	"revision":1,
+	"program":"Cot[x]",
+	"status":"evaluated",
+	"result":"Cot[x]",
+	"messages":[],
+	"image":"",
+	"seconds":2.396e-4,
+	"source":"wolfram\/questions\/A-004-common.wl"
+}

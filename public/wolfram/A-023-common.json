@@ -1,0 +1,12 @@
+{
+	"qid":"A-023",
+	"variant":"common",
+	"revision":2,
+	"program":"Re[a + I b]",
+	"status":"evaluated",
+	"result":"-Im[b] + Re[a]",
+	"messages":[],
+	"image":"",
+	"seconds":3.034e-4,
+	"source":"wolfram\/questions\/A-023-common.wl"
+}

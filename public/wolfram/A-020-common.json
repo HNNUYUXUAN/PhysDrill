@@ -1,0 +1,12 @@
+{
+	"qid":"A-020",
+	"variant":"common",
+	"revision":1,
+	"program":"Abs[2x]",
+	"status":"evaluated",
+	"result":"2*Abs[x]",
+	"messages":[],
+	"image":"",
+	"seconds":3.259e-4,
+	"source":"wolfram\/questions\/A-020-common.wl"
+}

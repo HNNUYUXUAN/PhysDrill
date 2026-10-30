@@ -1,0 +1,12 @@
+{
+	"qid":"C-006",
+	"variant":"modern",
+	"revision":1,
+	"program":"ContourPlot[(x^2 + y^2)^2 == x^2 - y^2, {x, 0, 2 Pi}, {y, -1, 1}]",
+	"status":"evaluated",
+	"result":"Graphics",
+	"messages":[],
+	"image":"wolfram\/C-006-modern.png",
+	"seconds":0.3356393,
+	"source":"wolfram\/questions\/C-006-modern.wl"
+}

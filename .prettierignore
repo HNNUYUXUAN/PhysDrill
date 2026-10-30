@@ -9,3 +9,4 @@ package-lock.json
 计算物理基础课程复习题库.md
 scripts/browser-*.cjs
 scripts/fixtures/invalid.json
+src/data/wolfram.json

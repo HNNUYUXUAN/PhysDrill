@@ -1,0 +1,12 @@
+{
+	"qid":"A-014",
+	"variant":"common",
+	"revision":1,
+	"program":"Sum[i, {i, 1, 10}]",
+	"status":"evaluated",
+	"result":"55",
+	"messages":[],
+	"image":"",
+	"seconds":5.191e-4,
+	"source":"wolfram\/questions\/A-014-common.wl"
+}

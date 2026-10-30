@@ -1,0 +1,12 @@
+{
+	"qid":"B-004",
+	"variant":"common",
+	"revision":1,
+	"program":"Limit[Sin[2 x]\/Sin[5 x], x -> 0]",
+	"status":"evaluated",
+	"result":"2\/5",
+	"messages":[],
+	"image":"",
+	"seconds":0.1048191,
+	"source":"wolfram\/questions\/B-004-common.wl"
+}

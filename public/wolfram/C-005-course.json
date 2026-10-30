@@ -1,0 +1,14 @@
+{
+	"qid":"C-005",
+	"variant":"course",
+	"revision":1,
+	"program":"<<Graphics`Graphics`\nPolarPlot[Sin[t] + 1, {t, 0, 2 Pi}]",
+	"status":"messages",
+	"result":"Graphics",
+	"messages":[
+		"\nGet::noopen: Cannot open Graphics`Graphics`."
+	],
+	"image":"wolfram\/C-005-course.png",
+	"seconds":2.3368988,
+	"source":"wolfram\/questions\/C-005-course.wl"
+}

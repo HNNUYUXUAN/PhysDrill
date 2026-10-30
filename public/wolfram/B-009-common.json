@@ -1,0 +1,12 @@
+{
+	"qid":"B-009",
+	"variant":"common",
+	"revision":1,
+	"program":"Sum[1\/k^2, {k, 1, Infinity}]",
+	"status":"evaluated",
+	"result":"Pi^2\/6",
+	"messages":[],
+	"image":"",
+	"seconds":4.00793e-2,
+	"source":"wolfram\/questions\/B-009-common.wl"
+}

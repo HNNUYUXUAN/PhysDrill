@@ -1,0 +1,12 @@
+{
+	"qid":"C-015",
+	"variant":"modern",
+	"revision":1,
+	"program":"RegionPlot3D[x^2 + y^2 + 2 x z <= 2, {x, -3, 3}, {y, -3, 3}, {z, -3, 3}]",
+	"status":"evaluated",
+	"result":"Graphics3D",
+	"messages":[],
+	"image":"wolfram\/C-015-modern.png",
+	"seconds":0.157398,
+	"source":"wolfram\/questions\/C-015-modern.wl"
+}

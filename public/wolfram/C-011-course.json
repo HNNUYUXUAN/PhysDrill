@@ -1,0 +1,14 @@
+{
+	"qid":"C-011",
+	"variant":"course",
+	"revision":1,
+	"program":"<<Graphics`PlotField`\nPlotVectorField[{Cos[x], Sin[y]}, {x, 0, Pi}, {y, 0, Pi}]",
+	"status":"messages",
+	"result":"PlotVectorField[{Cos[x], Sin[y]}, {x, 0, Pi}, {y, 0, Pi}]",
+	"messages":[
+		"\nGet::noopen: Cannot open Graphics`PlotField`."
+	],
+	"image":"",
+	"seconds":1.27101e-2,
+	"source":"wolfram\/questions\/C-011-course.wl"
+}

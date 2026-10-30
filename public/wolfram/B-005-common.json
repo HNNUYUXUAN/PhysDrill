@@ -1,0 +1,12 @@
+{
+	"qid":"B-005",
+	"variant":"common",
+	"revision":1,
+	"program":"D[a x + b x^2 + c, x]",
+	"status":"evaluated",
+	"result":"a + 2*b*x",
+	"messages":[],
+	"image":"",
+	"seconds":1.3127e-3,
+	"source":"wolfram\/questions\/B-005-common.wl"
+}

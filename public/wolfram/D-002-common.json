@@ -1,0 +1,12 @@
+{
+	"qid":"D-002",
+	"variant":"common",
+	"revision":2,
+	"program":"r = t + t^2;\nb = 1 + Sqrt[t];\nPsi = Pi r^2 b;\nv = -D[Psi, t];\nt = 2;\nSimplify[v]",
+	"status":"evaluated",
+	"result":"-3*(20 + 23*Sqrt[2])*Pi",
+	"messages":[],
+	"image":"",
+	"seconds":1.07548e-2,
+	"source":"wolfram\/questions\/D-002-common.wl"
+}

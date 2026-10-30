@@ -1,0 +1,12 @@
+{
+	"qid":"B-017",
+	"variant":"common",
+	"revision":1,
+	"program":"a = {{1, 9}, {2, 3}};\nInverse[a]",
+	"status":"evaluated",
+	"result":"{{-1\/5, 3\/5}, {2\/15, -1\/15}}",
+	"messages":[],
+	"image":"",
+	"seconds":2.04002e-2,
+	"source":"wolfram\/questions\/B-017-common.wl"
+}

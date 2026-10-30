@@ -1,0 +1,12 @@
+{
+	"qid":"A-011",
+	"variant":"common",
+	"revision":1,
+	"program":"Conjugate[x]",
+	"status":"evaluated",
+	"result":"Conjugate[x]",
+	"messages":[],
+	"image":"",
+	"seconds":2.713e-4,
+	"source":"wolfram\/questions\/A-011-common.wl"
+}

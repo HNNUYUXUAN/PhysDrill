@@ -1,0 +1,14 @@
+{
+	"qid":"C-013",
+	"variant":"course",
+	"revision":1,
+	"program":"<<Graphics`PlotField`\nPlotGradientField[x^2 + y^2, {x, -3, 3}, {y, -3, 3}]",
+	"status":"messages",
+	"result":"PlotGradientField[x^2 + y^2, {x, -3, 3}, {y, -3, 3}]",
+	"messages":[
+		"\nGet::noopen: Cannot open Graphics`PlotField`."
+	],
+	"image":"",
+	"seconds":1.35846e-2,
+	"source":"wolfram\/questions\/C-013-course.wl"
+}

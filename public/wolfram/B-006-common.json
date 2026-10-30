@@ -1,0 +1,12 @@
+{
+	"qid":"B-006",
+	"variant":"common",
+	"revision":1,
+	"program":"Dt[a x + b x^2 + c y, x]",
+	"status":"evaluated",
+	"result":"a + 2*b*x + x*Dt[a, x] + x^2*Dt[b, x] + y*Dt[c, x] + c*Dt[y, x]",
+	"messages":[],
+	"image":"",
+	"seconds":3.099e-4,
+	"source":"wolfram\/questions\/B-006-common.wl"
+}

@@ -1,0 +1,12 @@
+{
+	"qid":"B-011",
+	"variant":"common",
+	"revision":2,
+	"program":"Series[ArcSin[x], {x, 1, 8}]",
+	"status":"evaluated",
+	"result":"SeriesData[x, 1, {Pi\/2, -((Sqrt[2]*Sqrt[1 - x])\/Sqrt[-1 + x]), 0, \n  Sqrt[1 - x]\/(6*Sqrt[2]*Sqrt[-1 + x]), 0, (-3*Sqrt[1 - x])\/(80*Sqrt[2]*Sqrt[-1 + x]), 0, \n  (5*Sqrt[1 - x])\/(448*Sqrt[2]*Sqrt[-1 + x]), 0, (-35*Sqrt[1 - x])\/(9216*Sqrt[2]*Sqrt[-1 + x]), 0, \n  (63*Sqrt[1 - x])\/(45056*Sqrt[2]*Sqrt[-1 + x]), 0, \n  (-231*Sqrt[1 - x])\/(425984*Sqrt[2]*Sqrt[-1 + x]), 0, \n  (143*Sqrt[1 - x])\/(655360*Sqrt[2]*Sqrt[-1 + x])}, 0, 17, 2]",
+	"messages":[],
+	"image":"",
+	"seconds":4.86455e-2,
+	"source":"wolfram\/questions\/B-011-common.wl"
+}

@@ -1,0 +1,12 @@
+{
+	"qid":"B-001",
+	"variant":"common",
+	"revision":1,
+	"program":"Solve[a x + b == 0, x]",
+	"status":"evaluated",
+	"result":"{{x -> -(b\/a)}}",
+	"messages":[],
+	"image":"",
+	"seconds":1.63602e-2,
+	"source":"wolfram\/questions\/B-001-common.wl"
+}

@@ -1,0 +1,12 @@
+{
+	"qid":"B-018",
+	"variant":"common",
+	"revision":1,
+	"program":"b = {{3, 5}, {2, 3}};\nDet[b]",
+	"status":"evaluated",
+	"result":"-1",
+	"messages":[],
+	"image":"",
+	"seconds":2.592e-4,
+	"source":"wolfram\/questions\/B-018-common.wl"
+}

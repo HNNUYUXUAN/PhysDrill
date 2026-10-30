@@ -1,5 +1,6 @@
 import { Overview } from "./Overview";
 import { StatsDetails } from "./StatsDetails";
+import { WolframResult } from "./WolframResult";
 import { createRoot } from "react-dom/client";
 import { useState } from "react";
 import {
@@ -33,6 +34,8 @@ import {
   initial,
   STORAGE,
   compare,
+  submitAnswer,
+  correctionHint,
   type Config,
   type Question,
   type State,
@@ -96,17 +99,25 @@ function Reference({
         参考程序 ·{" "}
         {v.id === "common" ? "通用" : v.id === "course" ? "课程版" : "现代版"}
       </div>
-      <Code text={v.program} />
-      {v.note && (
-        <div className="note">
-          <MathText text={v.note} />
-        </div>
+      <div className="reference-answer">
+        <Code text={v.program} />
+      </div>
+      {(v.note || v.solution) && (
+        <details className="explanation">
+          <summary>展开解题过程与核验说明</summary>
+          {v.note && (
+            <div className="note">
+              <MathText text={v.note} />
+            </div>
+          )}
+          {v.solution && v.solution !== v.note && (
+            <div className="solution">
+              <MathText text={v.solution} />
+            </div>
+          )}
+        </details>
       )}
-      {v.solution && (
-        <div className="solution">
-          <MathText text={v.solution} />
-        </div>
-      )}
+      <WolframResult q={q} variant={v} />
       <details>
         <summary>来源与原始答案</summary>
         <p>
@@ -421,9 +432,28 @@ function App() {
                           session.config.mode === "syntax" &&
                           session.choice === null
                         }
-                        onClick={() => updateSession({ revealed: true })}
+                        onClick={() => {
+                          const matched =
+                            session.config.mode === "input" &&
+                            session.draft.trim() &&
+                            q.answerType === "mathematica" &&
+                            compare(
+                              session.draft,
+                              answer(q, session.config.profile).program,
+                              s.settings.strict,
+                            );
+                          setMessage(
+                            matched
+                              ? `${q.id} 与参考程序匹配，已通过。${s.settings.autoNext ? "继续下一题。" : "记录已保存。"}`
+                              : "",
+                          );
+                          update(submitAnswer);
+                        }}
                       >
-                        显示参考答案 <ArrowRight size={16} />
+                        {session.config.mode === "input" && session.draft.trim()
+                          ? "提交并检查"
+                          : "显示参考答案"}{" "}
+                        <ArrowRight size={16} />
                       </button>
                     ) : (
                       <>
@@ -437,14 +467,38 @@ function App() {
                         ) : (
                           session.draft &&
                           q.answerType === "mathematica" && (
-                            <div className="note">
+                            <div
+                              className={
+                                compare(
+                                  session.draft,
+                                  answer(q, session.config.profile).program,
+                                  s.settings.strict,
+                                )
+                                  ? "feedback pass"
+                                  : "feedback correction"
+                              }
+                              role="status"
+                            >
                               {compare(
                                 session.draft,
                                 answer(q, session.config.profile).program,
                                 s.settings.strict,
-                              )
-                                ? "与参考程序匹配"
-                                : "与参考程序有差异，请对照后自评。"}
+                              ) ? (
+                                "✓ 与参考程序匹配，已通过。"
+                              ) : (
+                                <>
+                                  需要订正或核对写法。
+                                  <p>
+                                    {correctionHint(
+                                      session.draft,
+                                      answer(q, session.config.profile).program,
+                                    )}
+                                  </p>
+                                  <small>
+                                    红色为参考答案。核对后选择本次结果；等价写法可自行确认。
+                                  </small>
+                                </>
+                              )}
                             </div>
                           )
                         )}
@@ -636,7 +690,7 @@ function App() {
             <div className="actions">
               <input
                 aria-label="搜索题目"
-                placeholder="搜索题目或命令……"
+                placeholder="搜索题目、命令或 ID……"
                 value={search}
                 onChange={(e) => setSearch(e.target.value)}
               />
@@ -660,7 +714,7 @@ function App() {
                   s.bank.questions.filter(
                     (q) =>
                       q.categoryId === c.id &&
-                      (q.prompt + q.tags.join(" "))
+                      (q.id + q.prompt + q.tags.join(" "))
                         .toLowerCase()
                         .includes(search.toLowerCase()),
                   ),

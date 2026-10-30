@@ -1,0 +1,12 @@
+{
+	"qid":"A-003",
+	"variant":"common",
+	"revision":1,
+	"program":"Tan[x]",
+	"status":"evaluated",
+	"result":"Tan[x]",
+	"messages":[],
+	"image":"",
+	"seconds":2.458e-4,
+	"source":"wolfram\/questions\/A-003-common.wl"
+}

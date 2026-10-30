@@ -1,0 +1,12 @@
+{
+	"qid":"C-013",
+	"variant":"modern",
+	"revision":1,
+	"program":"VectorPlot[Evaluate[{D[x^2 + y^2, x], D[x^2 + y^2, y]}], {x, -3, 3}, {y, -3, 3}]",
+	"status":"evaluated",
+	"result":"Graphics",
+	"messages":[],
+	"image":"wolfram\/C-013-modern.png",
+	"seconds":0.3872721,
+	"source":"wolfram\/questions\/C-013-modern.wl"
+}

@@ -1,0 +1,12 @@
+{
+	"qid":"A-007",
+	"variant":"common",
+	"revision":1,
+	"program":"Exp[x]",
+	"status":"evaluated",
+	"result":"E^x",
+	"messages":[],
+	"image":"",
+	"seconds":2.44e-4,
+	"source":"wolfram\/questions\/A-007-common.wl"
+}

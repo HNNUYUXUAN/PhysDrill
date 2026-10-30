@@ -1,0 +1,12 @@
+{
+	"qid":"A-012",
+	"variant":"common",
+	"revision":1,
+	"program":"Binomial[n, k]",
+	"status":"evaluated",
+	"result":"Binomial[n, k]",
+	"messages":[],
+	"image":"",
+	"seconds":4.998e-4,
+	"source":"wolfram\/questions\/A-012-common.wl"
+}

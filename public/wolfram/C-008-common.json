@@ -1,0 +1,12 @@
+{
+	"qid":"C-008",
+	"variant":"common",
+	"revision":1,
+	"program":"ParametricPlot3D[{Cos[t]^3, Sin[t]^3, t}, {t, 0, 2 Pi}]",
+	"status":"evaluated",
+	"result":"Graphics3D",
+	"messages":[],
+	"image":"wolfram\/C-008-common.png",
+	"seconds":0.138022,
+	"source":"wolfram\/questions\/C-008-common.wl"
+}

@@ -1,0 +1,12 @@
+{
+	"qid":"A-021",
+	"variant":"common",
+	"revision":1,
+	"program":"Max[x, y, z]",
+	"status":"evaluated",
+	"result":"Max[x, y, z]",
+	"messages":[],
+	"image":"",
+	"seconds":2.915e-4,
+	"source":"wolfram\/questions\/A-021-common.wl"
+}

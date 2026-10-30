@@ -1,0 +1,12 @@
+{
+	"qid":"A-008",
+	"variant":"common",
+	"revision":1,
+	"program":"Log[x]",
+	"status":"evaluated",
+	"result":"Log[x]",
+	"messages":[],
+	"image":"",
+	"seconds":2.386e-4,
+	"source":"wolfram\/questions\/A-008-common.wl"
+}

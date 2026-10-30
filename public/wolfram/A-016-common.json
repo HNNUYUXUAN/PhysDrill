@@ -1,0 +1,12 @@
+{
+	"qid":"A-016",
+	"variant":"common",
+	"revision":1,
+	"program":"Factor[(x-3)\/(x-1)]",
+	"status":"evaluated",
+	"result":"(-3 + x)\/(-1 + x)",
+	"messages":[],
+	"image":"",
+	"seconds":2.28028e-2,
+	"source":"wolfram\/questions\/A-016-common.wl"
+}

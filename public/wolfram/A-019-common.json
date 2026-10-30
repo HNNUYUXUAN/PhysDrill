@@ -1,0 +1,12 @@
+{
+	"qid":"A-019",
+	"variant":"common",
+	"revision":1,
+	"program":"ExpToTrig[Exp[I x]]",
+	"status":"evaluated",
+	"result":"Cos[x] + I*Sin[x]",
+	"messages":[],
+	"image":"",
+	"seconds":3.307e-4,
+	"source":"wolfram\/questions\/A-019-common.wl"
+}

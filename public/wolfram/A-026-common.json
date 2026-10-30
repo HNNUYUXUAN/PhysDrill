@@ -1,0 +1,12 @@
+{
+	"qid":"A-026",
+	"variant":"common",
+	"revision":1,
+	"program":"Expand[(x-1)^2]",
+	"status":"evaluated",
+	"result":"1 - 2*x + x^2",
+	"messages":[],
+	"image":"",
+	"seconds":2.856e-4,
+	"source":"wolfram\/questions\/A-026-common.wl"
+}

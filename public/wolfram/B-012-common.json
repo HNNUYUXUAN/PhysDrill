@@ -1,0 +1,12 @@
+{
+	"qid":"B-012",
+	"variant":"common",
+	"revision":1,
+	"program":"DSolve[\n  {y''[x] - y[x] == 1, y'[0] == y'[1], y[0] == 1 + y[1]},\n  y[x], x\n]",
+	"status":"evaluated",
+	"result":"{{y[x] -> -1\/2*(-E - 2*E^x + E^(2*x) + 2*E^(1 + x))\/((-1 + E)*E^x)}}",
+	"messages":[],
+	"image":"",
+	"seconds":8.04631e-2,
+	"source":"wolfram\/questions\/B-012-common.wl"
+}

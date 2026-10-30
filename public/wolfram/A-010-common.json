@@ -1,0 +1,12 @@
+{
+	"qid":"A-010",
+	"variant":"common",
+	"revision":1,
+	"program":"Sqrt[x]",
+	"status":"evaluated",
+	"result":"Sqrt[x]",
+	"messages":[],
+	"image":"",
+	"seconds":2.669e-4,
+	"source":"wolfram\/questions\/A-010-common.wl"
+}

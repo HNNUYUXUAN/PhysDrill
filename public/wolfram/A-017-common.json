@@ -1,0 +1,12 @@
+{
+	"qid":"A-017",
+	"variant":"common",
+	"revision":1,
+	"program":"TrigExpand[Cos[2x]]",
+	"status":"evaluated",
+	"result":"Cos[x]^2 - Sin[x]^2",
+	"messages":[],
+	"image":"",
+	"seconds":2.411e-3,
+	"source":"wolfram\/questions\/A-017-common.wl"
+}

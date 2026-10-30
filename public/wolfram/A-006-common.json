@@ -1,0 +1,12 @@
+{
+	"qid":"A-006",
+	"variant":"common",
+	"revision":1,
+	"program":"ArcTan[x]",
+	"status":"evaluated",
+	"result":"ArcTan[x]",
+	"messages":[],
+	"image":"",
+	"seconds":2.391e-4,
+	"source":"wolfram\/questions\/A-006-common.wl"
+}

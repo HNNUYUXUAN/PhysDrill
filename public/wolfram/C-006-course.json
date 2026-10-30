@@ -1,0 +1,14 @@
+{
+	"qid":"C-006",
+	"variant":"course",
+	"revision":1,
+	"program":"<<Graphics`ImplicitPlot`\nImplicitPlot[(x^2 + y^2)^2 == x^2 - y^2, {x, 0, 2 Pi}]",
+	"status":"messages",
+	"result":"ImplicitPlot[(x^2 + y^2)^2 == x^2 - y^2, {x, 0, 2*Pi}]",
+	"messages":[
+		"\nGet::noopen: Cannot open Graphics`ImplicitPlot`."
+	],
+	"image":"",
+	"seconds":1.20302e-2,
+	"source":"wolfram\/questions\/C-006-course.wl"
+}

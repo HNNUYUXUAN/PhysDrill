@@ -9,6 +9,8 @@ import {
   next,
   stats,
   compare,
+  submitAnswer,
+  correctionHint,
   order,
   eligible,
   syntax,
@@ -16,6 +18,7 @@ import {
   answer,
   importData,
   replaceBank,
+  upgradeBank,
   stateSchema,
   type Config,
 } from "./core";
@@ -28,6 +31,64 @@ const config: Config = {
   order: "source",
   length: 10,
 };
+describe("immediate feedback", () => {
+  it("preserves an active draft during a documentation-only bank update", () => {
+    const s = start(initial(), config);
+    s.session!.draft = "Sin[";
+    const b = structuredClone(bank);
+    b.questions[0].variants[0].note = "Updated evidence";
+    expect(upgradeBank(s, b).session).toEqual(s.session);
+    b.questions[0].variants[0].revision++;
+    expect(upgradeBank(s, b).session).toBe(null);
+  });
+  it("records a matching answer once and advances", () => {
+    let s = start(initial(), config);
+    s.session!.draft = answer(bank.questions[0], "course").program;
+    const submitted = submitAnswer(s);
+    expect(submitted.attempts).toHaveLength(1);
+    expect(submitted.attempts[0].result).toBe("correct");
+    expect(submitted.session!.qid).toBe("A-002");
+    expect(submitted.session!.draft).toBe("");
+  });
+  it("retains differences for correction and self assessment", () => {
+    const s = start(initial(), config);
+    s.session!.draft = "sin[x]";
+    const submitted = submitAnswer(s);
+    expect(submitted.attempts).toHaveLength(0);
+    expect(submitted.session!.revealed).toBe(true);
+    expect(submitAnswer(submitted)).toBe(submitted);
+    expect(correctionHint("sin[x]", "Sin[x]")).toContain("「Sin」");
+    expect(correctionHint("x = 1", "x == 1")).toContain("「==」");
+  });
+  it("keeps paper, empty answers and complex questions as self assessment", () => {
+    for (const c of [
+      { ...config, mode: "paper" as const },
+      { ...config, category: "D" },
+      config,
+    ]) {
+      const s = start(initial(), c);
+      if (c.category === "D")
+        s.session!.draft = answer(
+          bank.questions.find((q) => q.id === s.session!.qid)!,
+          "course",
+        ).program;
+      const result = submitAnswer(s);
+      expect(result.session!.revealed).toBe(true);
+      expect(result.attempts).toHaveLength(0);
+    }
+  });
+  it("respects manual next and persists a rated reveal idempotently", () => {
+    const s = start(initial(), config);
+    s.settings.autoNext = false;
+    s.session!.draft = answer(bank.questions[0], "course").program;
+    const result = stateSchema.parse(
+      JSON.parse(JSON.stringify(submitAnswer(s))),
+    );
+    expect(result.session!.rated).toBe(true);
+    expect(result.session!.qid).toBe("A-001");
+    expect(submitAnswer(result).attempts).toHaveLength(1);
+  });
+});
 describe("source bank", () => {
   it("contains exactly all source questions", () => {
     expect(bank.questions).toHaveLength(62);

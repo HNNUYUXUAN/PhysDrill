@@ -1,0 +1,12 @@
+{
+	"qid":"C-010",
+	"variant":"modern",
+	"revision":1,
+	"program":"SphericalPlot3D[Sin[r] + Cos[t]^2, {r, 0, Pi}, {t, 0, 2 Pi}]",
+	"status":"evaluated",
+	"result":"Graphics3D",
+	"messages":[],
+	"image":"wolfram\/C-010-modern.png",
+	"seconds":0.2661514,
+	"source":"wolfram\/questions\/C-010-modern.wl"
+}

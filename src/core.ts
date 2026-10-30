@@ -161,7 +161,7 @@ export function load() {
     return {
       state:
         saved.bank.bankVersion < bank.bankVersion
-          ? replaceBank(saved, bank)
+          ? upgradeBank(saved, bank)
           : saved,
       error: "",
     };
@@ -196,6 +196,37 @@ export function compare(a: string, b: string, strict = false) {
     return JSON.stringify(tokens);
   };
   return tokenize(a) === tokenize(b);
+}
+/** Reference matching only; a different program still needs human assessment. */
+export function submitAnswer(s: State): State {
+  const session = s.session;
+  if (!session || session.revealed || session.finished) return s;
+  const q = s.bank.questions.find((q) => q.id === session.qid)!;
+  const revealed = { ...s, session: { ...session, revealed: true } };
+  return session.config.mode === "input" &&
+    session.draft.trim() &&
+    q.answerType === "mathematica" &&
+    compare(
+      session.draft,
+      answer(q, session.config.profile).program,
+      s.settings.strict,
+    )
+    ? rate(revealed, "correct")
+    : revealed;
+}
+
+export function correctionHint(input: string, reference: string) {
+  const tokens = (s: string) =>
+    s.match(
+      /"(?:\\.|[^"\\])*"|[A-Za-z$][A-Za-z0-9$`]*|\d+(?:\.\d+)?|==|>=|<=|->|:=|\/\.|<<|[^\s]/g,
+    ) || [];
+  const actual = tokens(input),
+    expected = tokens(reference);
+  const i = expected.findIndex((t, index) => actual[index] !== t);
+  const at = i >= 0 ? i : expected.length;
+  if (i < 0 && actual.length === expected.length)
+    return "请检查换行、空白与语句边界；严格模式还会比较内部排版。";
+  return `从第 ${at + 1} 个符号开始核对：你写的是「${actual[at] || "缺少内容"}」，参考是「${expected[at] || "程序结束"}」。`;
 }
 export function syntax(q: Question, p: Profile, rng = Math.random) {
   const code = answer(q, p).program;
@@ -443,4 +474,23 @@ export function replaceBank(s: State, b: Bank): State {
           progress[k] = { ...p, streak: 0, due: day(), revision: v.revision };
       }
   return { ...s, bank: b, progress, session: null };
+}
+export function upgradeBank(s: State, b: Bank): State {
+  const updated = replaceBank(s, b);
+  const session = s.session;
+  if (
+    session &&
+    session.pool.every((id) => {
+      const old = s.bank.questions.find((q) => q.id === id);
+      const fresh = b.questions.find((q) => q.id === id);
+      if (!old || !fresh) return false;
+      const a = answer(old, session.config.profile),
+        v = answer(fresh, session.config.profile);
+      return (
+        a.id === v.id && a.revision === v.revision && a.program === v.program
+      );
+    })
+  )
+    updated.session = session;
+  return updated;
 }

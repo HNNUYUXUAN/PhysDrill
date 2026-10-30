@@ -1,0 +1,12 @@
+{
+	"qid":"B-003",
+	"variant":"common",
+	"revision":1,
+	"program":"Reduce[5 x + 6 >= 0]",
+	"status":"evaluated",
+	"result":"x >= -6\/5",
+	"messages":[],
+	"image":"",
+	"seconds":1.6366e-2,
+	"source":"wolfram\/questions\/B-003-common.wl"
+}

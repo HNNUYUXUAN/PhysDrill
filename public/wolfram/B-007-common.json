@@ -1,0 +1,12 @@
+{
+	"qid":"B-007",
+	"variant":"common",
+	"revision":1,
+	"program":"Integrate[2 x + 3 x^2 + 4, x]",
+	"status":"evaluated",
+	"result":"4*x + x^2 + x^3",
+	"messages":[],
+	"image":"",
+	"seconds":2.80152e-2,
+	"source":"wolfram\/questions\/B-007-common.wl"
+}

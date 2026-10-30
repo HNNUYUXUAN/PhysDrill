@@ -1,0 +1,12 @@
+{
+	"qid":"C-001",
+	"variant":"common",
+	"revision":1,
+	"program":"Plot[Sin[2 + Cos[x + 1]], {x, -10, 10}]",
+	"status":"evaluated",
+	"result":"Graphics",
+	"messages":[],
+	"image":"wolfram\/C-001-common.png",
+	"seconds":0.1542884,
+	"source":"wolfram\/questions\/C-001-common.wl"
+}

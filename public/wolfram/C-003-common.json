@@ -1,0 +1,12 @@
+{
+	"qid":"C-003",
+	"variant":"common",
+	"revision":1,
+	"program":"ContourPlot[x^2 + y^2, {x, 0, 2 Pi}, {y, 0, 2 Pi}]",
+	"status":"evaluated",
+	"result":"Graphics",
+	"messages":[],
+	"image":"wolfram\/C-003-common.png",
+	"seconds":0.3475577,
+	"source":"wolfram\/questions\/C-003-common.wl"
+}

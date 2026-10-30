@@ -1,0 +1,14 @@
+{
+	"qid":"C-015",
+	"variant":"course",
+	"revision":1,
+	"program":"<<Graphics`InequalityGraphics`\nInequalityPlot3D[\n  x^2 + y^2 + 2 x z <= 2,\n  {x, -3, 3}, {y, -3, 3}, {z, -3, 3}\n]",
+	"status":"messages",
+	"result":"InequalityPlot3D[x^2 + y^2 + 2*x*z <= 2, {x, -3, 3}, {y, -3, 3}, {z, -3, 3}]",
+	"messages":[
+		"\nGet::noopen: Cannot open Graphics`InequalityGraphics`."
+	],
+	"image":"",
+	"seconds":1.26185e-2,
+	"source":"wolfram\/questions\/C-015-course.wl"
+}

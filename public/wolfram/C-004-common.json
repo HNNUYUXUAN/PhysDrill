@@ -1,0 +1,12 @@
+{
+	"qid":"C-004",
+	"variant":"common",
+	"revision":1,
+	"program":"DensityPlot[x^2 + y^2, {x, 0, 2 Pi}, {y, 0, 2 Pi}]",
+	"status":"evaluated",
+	"result":"Graphics",
+	"messages":[],
+	"image":"wolfram\/C-004-common.png",
+	"seconds":0.1330243,
+	"source":"wolfram\/questions\/C-004-common.wl"
+}

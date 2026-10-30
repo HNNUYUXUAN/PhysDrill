@@ -1,5 +1,5 @@
 {
-  "bankVersion": 1,
+  "bankVersion": 2,
   "categories": [
     {
       "id": "A",
@@ -1800,7 +1800,7 @@
           "id": "modern",
           "program": "RegionPlot[x^2 + y^2 <= 2, {x, -3, 3}, {y, -3, 3}]",
           "solution": "",
-          "note": "官方命令；本机内核返回内部诊断，图形运行核验待复查。",
+          "note": "独立 Wolfram 15.0.1 内核已复跑并导出图形，未出现诊断；完整结果见 Wolfram 运行记录。",
           "revision": 1,
           "verification": "documentation-checked"
         }

@@ -1,0 +1,12 @@
+{
+	"qid":"C-009",
+	"variant":"modern",
+	"revision":1,
+	"program":"ParametricPlot3D[{r Cos[t], r Sin[t], r + Sin[t]^2}, {r, 0, 1}, {t, 0, 2 Pi}]",
+	"status":"evaluated",
+	"result":"Graphics3D",
+	"messages":[],
+	"image":"wolfram\/C-009-modern.png",
+	"seconds":0.1834959,
+	"source":"wolfram\/questions\/C-009-modern.wl"
+}

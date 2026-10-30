@@ -1,0 +1,12 @@
+{
+	"qid":"C-014",
+	"variant":"modern",
+	"revision":1,
+	"program":"RegionPlot[x^2 + y^2 <= 2, {x, -3, 3}, {y, -3, 3}]",
+	"status":"evaluated",
+	"result":"Graphics",
+	"messages":[],
+	"image":"wolfram\/C-014-modern.png",
+	"seconds":0.1287882,
+	"source":"wolfram\/questions\/C-014-modern.wl"
+}

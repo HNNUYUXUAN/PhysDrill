@@ -1,0 +1,12 @@
+{
+	"qid":"A-005",
+	"variant":"common",
+	"revision":1,
+	"program":"Sec[x]",
+	"status":"evaluated",
+	"result":"Sec[x]",
+	"messages":[],
+	"image":"",
+	"seconds":2.444e-4,
+	"source":"wolfram\/questions\/A-005-common.wl"
+}

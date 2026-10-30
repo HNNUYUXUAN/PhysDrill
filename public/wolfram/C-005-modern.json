@@ -1,0 +1,12 @@
+{
+	"qid":"C-005",
+	"variant":"modern",
+	"revision":1,
+	"program":"PolarPlot[Sin[t] + 1, {t, 0, 2 Pi}]",
+	"status":"evaluated",
+	"result":"Graphics",
+	"messages":[],
+	"image":"wolfram\/C-005-modern.png",
+	"seconds":2.2409849,
+	"source":"wolfram\/questions\/C-005-modern.wl"
+}

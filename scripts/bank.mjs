@@ -121,7 +121,7 @@ sections.forEach((section, ci) => {
               p.n === 6
                 ? "核验补充：y∈[-1,1] 是覆盖完整曲线的显示窗口。"
                 : p.n === 14
-                  ? "官方命令；本机内核返回内部诊断，图形运行核验待复查。"
+                  ? "独立 Wolfram 15.0.1 内核已复跑并导出图形，未出现诊断；完整结果见 Wolfram 运行记录。"
                   : "使用现代内置命令。",
             ),
           ]
@@ -136,7 +136,7 @@ fs.writeFileSync(
   "src/data/bank.json",
   JSON.stringify(
     {
-      bankVersion: 1,
+      bankVersion: 2,
       categories: categories.map((name, i) => ({
         id: String.fromCharCode(65 + i),
         name,

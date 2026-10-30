@@ -1,0 +1,12 @@
+{
+	"qid":"B-002",
+	"variant":"common",
+	"revision":1,
+	"program":"Eliminate[{a x + b y - z == 0, c x + d z - 10 == 0}, z]",
+	"status":"evaluated",
+	"result":"-10 + c*x + a*d*x + b*d*y == 0",
+	"messages":[],
+	"image":"",
+	"seconds":1.82337e-2,
+	"source":"wolfram\/questions\/B-002-common.wl"
+}

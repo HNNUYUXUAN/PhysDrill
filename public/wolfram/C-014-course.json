@@ -1,0 +1,14 @@
+{
+	"qid":"C-014",
+	"variant":"course",
+	"revision":1,
+	"program":"<<Graphics`InequalityGraphics`\nInequalityPlot[x^2 + y^2 <= 2, {x, -3, 3}, {y, -3, 3}]",
+	"status":"messages",
+	"result":"InequalityPlot[x^2 + y^2 <= 2, {x, -3, 3}, {y, -3, 3}]",
+	"messages":[
+		"\nGet::noopen: Cannot open Graphics`InequalityGraphics`."
+	],
+	"image":"",
+	"seconds":1.25466e-2,
+	"source":"wolfram\/questions\/C-014-course.wl"
+}

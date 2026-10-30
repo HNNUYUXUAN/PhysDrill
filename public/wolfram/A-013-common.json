@@ -1,0 +1,12 @@
+{
+	"qid":"A-013",
+	"variant":"common",
+	"revision":1,
+	"program":"Arg[x]",
+	"status":"evaluated",
+	"result":"Arg[x]",
+	"messages":[],
+	"image":"",
+	"seconds":1.0616e-3,
+	"source":"wolfram\/questions\/A-013-common.wl"
+}

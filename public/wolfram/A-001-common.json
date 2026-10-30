@@ -1,0 +1,12 @@
+{
+	"qid":"A-001",
+	"variant":"common",
+	"revision":1,
+	"program":"Sin[x]",
+	"status":"evaluated",
+	"result":"Sin[x]",
+	"messages":[],
+	"image":"",
+	"seconds":6.954e-4,
+	"source":"wolfram\/questions\/A-001-common.wl"
+}

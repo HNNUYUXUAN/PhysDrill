@@ -1,0 +1,12 @@
+{
+	"qid":"B-013",
+	"variant":"common",
+	"revision":2,
+	"program":"Maximize[1 - ((x - 2)^2)^(1\/3), x]",
+	"status":"evaluated",
+	"result":"{1, {x -> 2}}",
+	"messages":[],
+	"image":"",
+	"seconds":6.85182e-2,
+	"source":"wolfram\/questions\/B-013-common.wl"
+}

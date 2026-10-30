@@ -1,0 +1,14 @@
+{
+	"qid":"C-012",
+	"variant":"course",
+	"revision":1,
+	"program":"<<Graphics`PlotField3D`\nPlotVectorField3D[\n  {Cos[x], Sin[y], z},\n  {x, 0, Pi}, {y, 0, Pi}, {z, 0, Pi}\n]",
+	"status":"messages",
+	"result":"PlotVectorField3D[{Cos[x], Sin[y], z}, {x, 0, Pi}, {y, 0, Pi}, {z, 0, Pi}]",
+	"messages":[
+		"\nGet::noopen: Cannot open Graphics`PlotField3D`."
+	],
+	"image":"",
+	"seconds":1.27489e-2,
+	"source":"wolfram\/questions\/C-012-course.wl"
+}

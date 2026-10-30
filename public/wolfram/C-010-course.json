@@ -1,0 +1,14 @@
+{
+	"qid":"C-010",
+	"variant":"course",
+	"revision":1,
+	"program":"<<Graphics`ParametricPlot3D`\nSphericalPlot3D[Sin[r] + Cos[t]^2, {r, 0, Pi}, {t, 0, 2 Pi}]",
+	"status":"messages",
+	"result":"Graphics3D",
+	"messages":[
+		"\nGet::noopen: Cannot open Graphics`ParametricPlot3D`."
+	],
+	"image":"wolfram\/C-010-course.png",
+	"seconds":0.331149,
+	"source":"wolfram\/questions\/C-010-course.wl"
+}

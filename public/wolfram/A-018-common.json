@@ -1,0 +1,12 @@
+{
+	"qid":"A-018",
+	"variant":"common",
+	"revision":1,
+	"program":"TrigToExp[Sin[x]]",
+	"status":"evaluated",
+	"result":"(I\/2)\/E^(I*x) - (I\/2)*E^(I*x)",
+	"messages":[],
+	"image":"",
+	"seconds":3.027e-4,
+	"source":"wolfram\/questions\/A-018-common.wl"
+}

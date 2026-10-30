@@ -1,0 +1,12 @@
+{
+	"qid":"A-022",
+	"variant":"common",
+	"revision":1,
+	"program":"Min[x, y, z]",
+	"status":"evaluated",
+	"result":"Min[x, y, z]",
+	"messages":[],
+	"image":"",
+	"seconds":2.888e-4,
+	"source":"wolfram\/questions\/A-022-common.wl"
+}

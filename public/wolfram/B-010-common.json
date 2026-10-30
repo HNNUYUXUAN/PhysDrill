@@ -1,0 +1,12 @@
+{
+	"qid":"B-010",
+	"variant":"common",
+	"revision":1,
+	"program":"Product[2 i^2 + 4, {i, 1, 5}]",
+	"status":"evaluated",
+	"result":"3079296",
+	"messages":[],
+	"image":"",
+	"seconds":2.481e-4,
+	"source":"wolfram\/questions\/B-010-common.wl"
+}

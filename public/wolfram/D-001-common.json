@@ -1,0 +1,12 @@
+{
+	"qid":"D-001",
+	"variant":"common",
+	"revision":1,
+	"program":"x = t^3 + 2 t + 4;\nv = D[x, t];\na = D[v, t];\nt = 2;\nv2 = v;\na2 = a;",
+	"status":"evaluated",
+	"result":"{14, 12}",
+	"messages":[],
+	"image":"",
+	"seconds":2.912e-4,
+	"source":"wolfram\/questions\/D-001-common.wl"
+}

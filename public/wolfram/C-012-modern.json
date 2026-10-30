@@ -1,0 +1,12 @@
+{
+	"qid":"C-012",
+	"variant":"modern",
+	"revision":1,
+	"program":"VectorPlot3D[{Cos[x], Sin[y], z}, {x, 0, Pi}, {y, 0, Pi}, {z, 0, Pi}]",
+	"status":"evaluated",
+	"result":"Graphics3D",
+	"messages":[],
+	"image":"wolfram\/C-012-modern.png",
+	"seconds":0.5423491,
+	"source":"wolfram\/questions\/C-012-modern.wl"
+}

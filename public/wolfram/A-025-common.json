@@ -1,0 +1,12 @@
+{
+	"qid":"A-025",
+	"variant":"common",
+	"revision":1,
+	"program":"Simplify[(x^2-1)\/(x+1)]",
+	"status":"evaluated",
+	"result":"-1 + x",
+	"messages":[],
+	"image":"",
+	"seconds":5.03687e-2,
+	"source":"wolfram\/questions\/A-025-common.wl"
+}

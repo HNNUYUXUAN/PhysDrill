@@ -1,6 +1,8 @@
 # PhysDrill
 
-**Computational Physics Drill Platform** · [简体中文](README.md)
+**Computational Physics Drill Platform** · [Try online](https://hnnuyuxuan.github.io/PhysDrill/) · [简体中文](README.md)
+
+![Paper-and-pen study illustration](docs/assets/hero.webp)
 
 A local-first practice application for handwritten computational physics exams. Recall a command, write it, reveal the reference, assess your understanding, and repeat. The interface and course questions are in Chinese.
 
@@ -37,18 +39,27 @@ Development and preview use the same fixed address and port. Stop the other serv
 
 ## Practice workflow
 
-![Actual sequence: write, reveal, mark wrong, revisit the wrong book](docs/assets/drill-flow.gif)
+| Recall and remember | Correct and repeat |
+|:---:|:---:|
+| ![Program recall illustration](docs/assets/memory.webp) | ![Correction illustration](docs/assets/correction.webp) |
+| Retrieve the command, then write it out. | Inspect the difference and revisit weak questions. |
+
+These editorial illustrations were created in the ChatGPT website. The demonstration below shows the actual application.
+
+![Actual sequence: write, correct, pass a matching answer, revisit errors](docs/assets/drill-flow.gif)
 
 The animation uses actual browser screenshots with a two-second hold per frame; playback timing is illustrative.
 
 - 62 source questions: 27 symbolic operations, 18 solving, 15 plotting, 2 calculations.
+- Immediate reference matching: matching input is recorded as correct and advances by default; differences point to the first token to check.
+- Red reference programs come first. Derivations, verification notes, and Wolfram graphics expand on demand.
 - Typed practice, paper recall without typing, and deterministic syntax exercises.
 - Category, command tag, wrong, unseen, and due filters; random or source order; 10/20/50/custom/unlimited sessions.
 - Wrong and uncertain attempts enter the wrong book. Correct answers and manual removal preserve historical errors.
 - Drafts, current question, revealed state, and progress survive refresh.
 - Statistics derive from actual completed assessments. Syntax exercises have separate records and do not establish full-question mastery.
 
-![Actual mobile practice screen in Chinese](docs/assets/mobile-drill.png)
+<img src="docs/assets/mobile-drill.png" alt="Actual mobile correction and red reference answer" width="320">
 
 ## Answers and checking
 
@@ -56,9 +67,25 @@ The original Markdown files remain unchanged. Corrected answers retain their pro
 
 Course mode retains historical API conventions; modern mode uses current built-in commands. Course mode is the default. Different answer variants have separate progress, identical answers share it, and active sessions retain their selected version.
 
-Comparison reports reference-text matches or differences, not general mathematical equivalence. Normalized checking preserves case, brackets, operators, argument order, and symbol boundaries. Strict mode also preserves internal whitespace. Multi-step calculations use self-assessment. Interpretation notes accompany ambiguous source wording.
+Matching input is recorded as correct. Differences reveal correction hints and leave the final assessment to the learner, including equivalent alternative programs. Comparison reports reference-text matches or differences, not general mathematical equivalence. Normalized checking preserves case, brackets, operators, argument order, and symbol boundaries. Strict mode also preserves internal whitespace. Multi-step calculations use self-assessment. Interpretation notes accompany ambiguous source wording.
 
 Three consecutive confident answers establish mastery. Review intervals are 1, 3, 7, and 14 days. Wrong answers are due today; uncertain answers tomorrow. Random rounds avoid repetition until the pool is exhausted and prioritize weaker questions.
+
+## Reproducible Wolfram evidence
+
+The 62 questions have **71 published `.wl` programs**, each executed in a fresh Wolfram 15.0.1 kernel. All 62 common/modern programs completed without diagnostic messages, including exported images for all 15 plotting questions. Nine course variants retain missing-package diagnostics; two still produce plots through built-in commands. Six additional mathematical tests cover key corrections.
+
+[Wolfram sources and runner](wolfram/) · [Full execution record](public/wolfram/audit.json) · [Method and limitations](docs/verification.md)
+
+![Actual Wolfram surface, gradient field, and region exports](docs/assets/wolfram-gallery.webp)
+
+Expand the Wolfram section under an answer to inspect its real image and output. The handwritten program remains the learning priority. Reproducing the audit requires your own licensed Wolfram installation; everyday web practice does not.
+
+```sh
+node scripts/wolfram-files.mjs
+wolframscript -file wolfram/RunAll.wls
+wolframscript -file wolfram/TestCorrections.wls
+```
 
 ## Data and architecture
 
@@ -71,6 +98,9 @@ flowchart LR
   Source[Course Markdown] --> Convert[Conversion and corrections]
   Convert --> Bank[Typed question bank]
   Bank --> App[React practice UI]
+  Bank --> WL[Development-time Wolfram audit]
+  WL --> Evidence[Programs / Outputs / Images / Diagnostics]
+  Evidence --> App
   App --> Core[Comparison / Selection / Review / Statistics]
   Core --> Local[Browser localStorage]
   Local --> Backup[JSON backup and restore]
@@ -80,10 +110,16 @@ Run `npm run bank` after changing conversion rules or corrections, then run test
 
 ## Validation and limitations
 
-Core tests, formula rendering, type checks, builds, and GitHub Actions are included. `scripts/browser-check.cjs` drives actual browser checks through an existing fixed Playwright CLI installation; this runtime is not an application dependency.
+35 tests cover core logic, formula rendering, and published Wolfram evidence. Type checks, builds, and GitHub Actions are included. `scripts/browser-marking.cjs` drives actual browser checks through an existing fixed Playwright CLI installation; this runtime is not an application dependency.
 
-The available Wolfram kernel lacks several legacy packages and reports internal diagnostics for some modern plotting operations. These are recorded separately from syntax validation. Successful parsing is not proof of full mathematical or graphical correctness. The browser does not execute Mathematica code.
+The available Wolfram kernel lacks the legacy plotting packages used in the course; diagnostics are published. Earlier tool-session diagnostics did not recur in this fresh-kernel run, and the exported plots have been reviewed. Successful execution establishes evaluability; mathematical interpretation still depends on the problem, assumptions, and documented checks. The browser does not execute Mathematica code.
 
 ## Deployment
 
 Pushes to main run tests and build, then publish `dist/` through GitHub Actions to GitHub Pages. The project base path is `/PhysDrill/`; formula fonts and icons ship with the build. See `.github/workflows/pages.yml`.
+
+## A small portfolio project
+
+Built from a personal exam-preparation need, PhysDrill connects source conversion, answer versions, quick feedback, review scheduling, and reproducible verification in a lightweight tool. Use the [project case note](docs/portfolio.md), actual screenshots, and live link in a portfolio. The visual language uses black and white for reading, red for marking, and blue for supporting notes.
+
+See [asset provenance](docs/assets/README.md).

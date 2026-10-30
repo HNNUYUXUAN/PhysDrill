@@ -1,0 +1,14 @@
+{
+	"qid":"C-009",
+	"variant":"course",
+	"revision":1,
+	"program":"<<Graphics`ParametricPlot3D`\nCylindricalPlot3D[r + Sin[t]^2, {r, 0, 1}, {t, 0, 2 Pi}]",
+	"status":"messages",
+	"result":"CylindricalPlot3D[r + Sin[t]^2, {r, 0, 1}, {t, 0, 2*Pi}]",
+	"messages":[
+		"\nGet::noopen: Cannot open Graphics`ParametricPlot3D`."
+	],
+	"image":"",
+	"seconds":1.4134e-2,
+	"source":"wolfram\/questions\/C-009-course.wl"
+}
