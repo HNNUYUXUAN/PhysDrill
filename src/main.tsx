@@ -1040,10 +1040,7 @@ function App() {
             </section>
           </>
         )}
-        <footer>
-          PhysDrill · Computational Physics Drill Platform{" "}
-          <span>本地保存 · 题库 v{s.bank.bankVersion}</span>
-        </footer>
+        <footer>PhysDrill · Computational Physics Drill Platform</footer>
       </main>
       {detail && (
         <div className="modal-backdrop" onClick={() => setDetail(null)}>

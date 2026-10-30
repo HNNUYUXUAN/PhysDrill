@@ -1,0 +1,23 @@
+# PhysDrill
+
+> Computational physics practice for handwritten exams: 62 source questions, Mathematica reference programs, correction feedback, paper recall, and local progress.
+
+Primary app: https://physdrill.yuxuan.wiki
+Repository: https://github.com/HNNUYUXUAN/PhysDrill
+
+## Read first
+
+- [Agent guide](docs/wiki/agent-guide.md): task map, invariants, commands, validation.
+- [Wiki](docs/wiki/README.md): documentation index.
+- [Usage](docs/wiki/usage.md): Chinese interface guide and English quick guide.
+- [Architecture](docs/wiki/architecture.md): React state, local storage, and evidence flow.
+- [Question bank](docs/wiki/question-bank.md): generation, provenance, answer revisions.
+- [Deployment](docs/wiki/deployment.md): domain-root and GitHub Pages builds.
+
+## Evidence
+
+- [Course source](sources/questions.md): original questions and answers.
+- [Verification](docs/verification.md): mathematical corrections and execution findings.
+- [Wolfram](wolfram/README.md): 71 programs, kernel requirements, rerun commands.
+- [Audit](public/wolfram/audit.json): recorded program execution and graphics.
+- [Asset provenance](docs/assets/README.md): screenshots, memes, and university logo.

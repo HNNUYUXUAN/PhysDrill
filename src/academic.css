@@ -596,9 +596,6 @@ footer {
   font-size: 15px;
   color: #666;
 }
-footer span {
-  font-size: 14px;
-}
 @media (max-width: 900px) {
   aside {
     padding: 10px 20px;

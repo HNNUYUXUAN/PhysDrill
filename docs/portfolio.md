@@ -1,6 +1,6 @@
 # PhysDrill · 项目介绍
 
-[在线体验](https://hnnuyuxuan.github.io/PhysDrill/) · [源码](https://github.com/HNNUYUXUAN/PhysDrill)
+[在线体验](https://physdrill.yuxuan.wiki) · [源码](https://github.com/HNNUYUXUAN/PhysDrill)
 
 ## 一句话
 
@@ -14,7 +14,7 @@
 
 ## 实现
 
-- React + TypeScript + Vite；纯静态 GitHub Pages，适配电脑和手机。
+- React + TypeScript + Vite；静态网站，适配电脑和手机。
 - 本地持久化保存草稿、错题、掌握状态和练习记录，JSON 备份支持设备间手动转移。
 - 课程版／现代版答案共存，稳定 ID 与修订号使来源和进度可追溯。
 - 简单、可解释的加权抽题和 1／3／7／14 天复习间隔。
@@ -30,6 +30,6 @@
 
 **PhysDrill is a local-first study tool for handwritten computational physics exams.** It converts 62 course questions into repeatable drills, with precise reference matching, correction cues, paper recall, and a persistent wrong-answer book.
 
-The design prioritizes the reference program: red answers first, optional derivations and real Wolfram exports second. A static React/TypeScript application runs on GitHub Pages across desktop and mobile. Browser storage keeps progress local, with manual JSON backup transfer.
+The design prioritizes the reference program: red answers first, optional derivations and real Wolfram exports second. A static React/TypeScript application serves desktop and mobile browsers. Browser storage keeps progress local, with manual JSON backup transfer.
 
 Engineering evidence includes 71 published Wolfram programs executed in fresh kernels, images for all 15 plotting questions, six targeted mathematical checks, and automated application tests. The project demonstrates a complete path from source material to a usable, verifiable study workflow.
