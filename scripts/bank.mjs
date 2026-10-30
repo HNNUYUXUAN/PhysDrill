@@ -1,6 +1,6 @@
 import fs from "node:fs";
 import crypto from "node:crypto";
-const file = "计算物理基础课程复习题库.md";
+const file = "sources/questions.md";
 const raw = fs.readFileSync(file, "utf8");
 const text = raw.replace(/\r\n/g, "\n");
 const sha256 = crypto.createHash("sha256").update(raw).digest("hex");
@@ -11,7 +11,7 @@ const corrections = {
   "A-024": ["Im[a + I b]", "ib 是单个符号；虚数单位使用大写 I。"],
   "B-011": [
     "Series[ArcSin[x], {x, 1, 8}]",
-    "核验说明：x=1 是分支点，不能作普通 Taylor 展开。本题按广义级数理解，常数计入，取前 9 个非零项。第三参数是阶数，此处取 8。",
+    "核验说明：x=1 是分支点，本题采用广义级数展开，常数计入，取前 9 个非零项。第三参数是阶数，此处取 8。",
   ],
   "B-013": [
     "Maximize[1 - ((x - 2)^2)^(1/3), x]",
@@ -136,7 +136,7 @@ fs.writeFileSync(
   "src/data/bank.json",
   JSON.stringify(
     {
-      bankVersion: 2,
+      bankVersion: 3,
       categories: categories.map((name, i) => ({
         id: String.fromCharCode(65 + i),
         name,

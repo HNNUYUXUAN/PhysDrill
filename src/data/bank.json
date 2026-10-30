@@ -1,5 +1,5 @@
 {
-  "bankVersion": 2,
+  "bankVersion": 3,
   "categories": [
     {
       "id": "A",
@@ -30,7 +30,7 @@
         "Sin"
       ],
       "source": {
-        "file": "计算物理基础课程复习题库.md",
+        "file": "sources/questions.md",
         "section": "基础符号",
         "item": 1,
         "lineStart": 45,
@@ -59,7 +59,7 @@
         "Cos"
       ],
       "source": {
-        "file": "计算物理基础课程复习题库.md",
+        "file": "sources/questions.md",
         "section": "基础符号",
         "item": 2,
         "lineStart": 46,
@@ -88,7 +88,7 @@
         "Tan"
       ],
       "source": {
-        "file": "计算物理基础课程复习题库.md",
+        "file": "sources/questions.md",
         "section": "基础符号",
         "item": 3,
         "lineStart": 47,
@@ -117,7 +117,7 @@
         "Cot"
       ],
       "source": {
-        "file": "计算物理基础课程复习题库.md",
+        "file": "sources/questions.md",
         "section": "基础符号",
         "item": 4,
         "lineStart": 48,
@@ -146,7 +146,7 @@
         "Sec"
       ],
       "source": {
-        "file": "计算物理基础课程复习题库.md",
+        "file": "sources/questions.md",
         "section": "基础符号",
         "item": 5,
         "lineStart": 49,
@@ -175,7 +175,7 @@
         "ArcTan"
       ],
       "source": {
-        "file": "计算物理基础课程复习题库.md",
+        "file": "sources/questions.md",
         "section": "基础符号",
         "item": 6,
         "lineStart": 50,
@@ -204,7 +204,7 @@
         "Exp"
       ],
       "source": {
-        "file": "计算物理基础课程复习题库.md",
+        "file": "sources/questions.md",
         "section": "基础符号",
         "item": 7,
         "lineStart": 51,
@@ -233,7 +233,7 @@
         "Log"
       ],
       "source": {
-        "file": "计算物理基础课程复习题库.md",
+        "file": "sources/questions.md",
         "section": "基础符号",
         "item": 8,
         "lineStart": 52,
@@ -262,7 +262,7 @@
         "Log"
       ],
       "source": {
-        "file": "计算物理基础课程复习题库.md",
+        "file": "sources/questions.md",
         "section": "基础符号",
         "item": 9,
         "lineStart": 53,
@@ -291,7 +291,7 @@
         "Sqrt"
       ],
       "source": {
-        "file": "计算物理基础课程复习题库.md",
+        "file": "sources/questions.md",
         "section": "基础符号",
         "item": 10,
         "lineStart": 54,
@@ -320,7 +320,7 @@
         "Conjugate"
       ],
       "source": {
-        "file": "计算物理基础课程复习题库.md",
+        "file": "sources/questions.md",
         "section": "基础符号",
         "item": 11,
         "lineStart": 55,
@@ -349,7 +349,7 @@
         "Binomial"
       ],
       "source": {
-        "file": "计算物理基础课程复习题库.md",
+        "file": "sources/questions.md",
         "section": "基础符号",
         "item": 12,
         "lineStart": 56,
@@ -378,7 +378,7 @@
         "Arg"
       ],
       "source": {
-        "file": "计算物理基础课程复习题库.md",
+        "file": "sources/questions.md",
         "section": "基础符号",
         "item": 13,
         "lineStart": 57,
@@ -407,7 +407,7 @@
         "Sum"
       ],
       "source": {
-        "file": "计算物理基础课程复习题库.md",
+        "file": "sources/questions.md",
         "section": "基础符号",
         "item": 14,
         "lineStart": 58,
@@ -436,7 +436,7 @@
         "Simplify"
       ],
       "source": {
-        "file": "计算物理基础课程复习题库.md",
+        "file": "sources/questions.md",
         "section": "基础符号",
         "item": 15,
         "lineStart": 59,
@@ -465,7 +465,7 @@
         "Factor"
       ],
       "source": {
-        "file": "计算物理基础课程复习题库.md",
+        "file": "sources/questions.md",
         "section": "基础符号",
         "item": 16,
         "lineStart": 60,
@@ -495,7 +495,7 @@
         "Cos"
       ],
       "source": {
-        "file": "计算物理基础课程复习题库.md",
+        "file": "sources/questions.md",
         "section": "基础符号",
         "item": 17,
         "lineStart": 61,
@@ -525,7 +525,7 @@
         "Sin"
       ],
       "source": {
-        "file": "计算物理基础课程复习题库.md",
+        "file": "sources/questions.md",
         "section": "基础符号",
         "item": 18,
         "lineStart": 62,
@@ -555,7 +555,7 @@
         "Exp"
       ],
       "source": {
-        "file": "计算物理基础课程复习题库.md",
+        "file": "sources/questions.md",
         "section": "基础符号",
         "item": 19,
         "lineStart": 63,
@@ -584,7 +584,7 @@
         "Abs"
       ],
       "source": {
-        "file": "计算物理基础课程复习题库.md",
+        "file": "sources/questions.md",
         "section": "基础符号",
         "item": 20,
         "lineStart": 64,
@@ -613,7 +613,7 @@
         "Max"
       ],
       "source": {
-        "file": "计算物理基础课程复习题库.md",
+        "file": "sources/questions.md",
         "section": "基础符号",
         "item": 21,
         "lineStart": 65,
@@ -642,7 +642,7 @@
         "Min"
       ],
       "source": {
-        "file": "计算物理基础课程复习题库.md",
+        "file": "sources/questions.md",
         "section": "基础符号",
         "item": 22,
         "lineStart": 66,
@@ -671,7 +671,7 @@
         "Re"
       ],
       "source": {
-        "file": "计算物理基础课程复习题库.md",
+        "file": "sources/questions.md",
         "section": "基础符号",
         "item": 23,
         "lineStart": 67,
@@ -700,7 +700,7 @@
         "Im"
       ],
       "source": {
-        "file": "计算物理基础课程复习题库.md",
+        "file": "sources/questions.md",
         "section": "基础符号",
         "item": 24,
         "lineStart": 68,
@@ -729,7 +729,7 @@
         "Simplify"
       ],
       "source": {
-        "file": "计算物理基础课程复习题库.md",
+        "file": "sources/questions.md",
         "section": "基础符号",
         "item": 25,
         "lineStart": 69,
@@ -758,7 +758,7 @@
         "Expand"
       ],
       "source": {
-        "file": "计算物理基础课程复习题库.md",
+        "file": "sources/questions.md",
         "section": "基础符号",
         "item": 26,
         "lineStart": 70,
@@ -787,7 +787,7 @@
         "Factor"
       ],
       "source": {
-        "file": "计算物理基础课程复习题库.md",
+        "file": "sources/questions.md",
         "section": "基础符号",
         "item": 27,
         "lineStart": 71,
@@ -816,7 +816,7 @@
         "Solve"
       ],
       "source": {
-        "file": "计算物理基础课程复习题库.md",
+        "file": "sources/questions.md",
         "section": "求解题",
         "item": 1,
         "lineStart": 75,
@@ -845,7 +845,7 @@
         "Eliminate"
       ],
       "source": {
-        "file": "计算物理基础课程复习题库.md",
+        "file": "sources/questions.md",
         "section": "求解题",
         "item": 2,
         "lineStart": 81,
@@ -874,7 +874,7 @@
         "Reduce"
       ],
       "source": {
-        "file": "计算物理基础课程复习题库.md",
+        "file": "sources/questions.md",
         "section": "求解题",
         "item": 3,
         "lineStart": 94,
@@ -904,7 +904,7 @@
         "Sin"
       ],
       "source": {
-        "file": "计算物理基础课程复习题库.md",
+        "file": "sources/questions.md",
         "section": "求解题",
         "item": 4,
         "lineStart": 100,
@@ -931,7 +931,7 @@
       "answerType": "mathematica",
       "tags": [],
       "source": {
-        "file": "计算物理基础课程复习题库.md",
+        "file": "sources/questions.md",
         "section": "求解题",
         "item": 5,
         "lineStart": 106,
@@ -960,7 +960,7 @@
         "Dt"
       ],
       "source": {
-        "file": "计算物理基础课程复习题库.md",
+        "file": "sources/questions.md",
         "section": "求解题",
         "item": 6,
         "lineStart": 112,
@@ -989,7 +989,7 @@
         "Integrate"
       ],
       "source": {
-        "file": "计算物理基础课程复习题库.md",
+        "file": "sources/questions.md",
         "section": "求解题",
         "item": 7,
         "lineStart": 118,
@@ -1018,7 +1018,7 @@
         "Integrate"
       ],
       "source": {
-        "file": "计算物理基础课程复习题库.md",
+        "file": "sources/questions.md",
         "section": "求解题",
         "item": 8,
         "lineStart": 124,
@@ -1047,7 +1047,7 @@
         "Sum"
       ],
       "source": {
-        "file": "计算物理基础课程复习题库.md",
+        "file": "sources/questions.md",
         "section": "求解题",
         "item": 9,
         "lineStart": 130,
@@ -1076,7 +1076,7 @@
         "Product"
       ],
       "source": {
-        "file": "计算物理基础课程复习题库.md",
+        "file": "sources/questions.md",
         "section": "求解题",
         "item": 10,
         "lineStart": 140,
@@ -1106,7 +1106,7 @@
         "ArcSin"
       ],
       "source": {
-        "file": "计算物理基础课程复习题库.md",
+        "file": "sources/questions.md",
         "section": "求解题",
         "item": 11,
         "lineStart": 150,
@@ -1119,7 +1119,7 @@
           "id": "common",
           "program": "Series[ArcSin[x], {x, 1, 8}]",
           "solution": "",
-          "note": "核验说明：x=1 是分支点，不能作普通 Taylor 展开。本题按广义级数理解，常数计入，取前 9 个非零项。第三参数是阶数，此处取 8。",
+          "note": "核验说明：x=1 是分支点，本题采用广义级数展开，常数计入，取前 9 个非零项。第三参数是阶数，此处取 8。",
           "revision": 2,
           "verification": "kernel-verified"
         }
@@ -1135,7 +1135,7 @@
         "DSolve"
       ],
       "source": {
-        "file": "计算物理基础课程复习题库.md",
+        "file": "sources/questions.md",
         "section": "求解题",
         "item": 12,
         "lineStart": 156,
@@ -1164,7 +1164,7 @@
         "Maximize"
       ],
       "source": {
-        "file": "计算物理基础课程复习题库.md",
+        "file": "sources/questions.md",
         "section": "求解题",
         "item": 13,
         "lineStart": 169,
@@ -1193,7 +1193,7 @@
         "Minimize"
       ],
       "source": {
-        "file": "计算物理基础课程复习题库.md",
+        "file": "sources/questions.md",
         "section": "求解题",
         "item": 14,
         "lineStart": 179,
@@ -1222,7 +1222,7 @@
         "Dot"
       ],
       "source": {
-        "file": "计算物理基础课程复习题库.md",
+        "file": "sources/questions.md",
         "section": "求解题",
         "item": 15,
         "lineStart": 189,
@@ -1251,7 +1251,7 @@
         "Cross"
       ],
       "source": {
-        "file": "计算物理基础课程复习题库.md",
+        "file": "sources/questions.md",
         "section": "求解题",
         "item": 16,
         "lineStart": 201,
@@ -1280,7 +1280,7 @@
         "Inverse"
       ],
       "source": {
-        "file": "计算物理基础课程复习题库.md",
+        "file": "sources/questions.md",
         "section": "求解题",
         "item": 17,
         "lineStart": 213,
@@ -1309,7 +1309,7 @@
         "Det"
       ],
       "source": {
-        "file": "计算物理基础课程复习题库.md",
+        "file": "sources/questions.md",
         "section": "求解题",
         "item": 18,
         "lineStart": 224,
@@ -1340,7 +1340,7 @@
         "Cos"
       ],
       "source": {
-        "file": "计算物理基础课程复习题库.md",
+        "file": "sources/questions.md",
         "section": "绘图题",
         "item": 1,
         "lineStart": 237,
@@ -1371,7 +1371,7 @@
         "Sin"
       ],
       "source": {
-        "file": "计算物理基础课程复习题库.md",
+        "file": "sources/questions.md",
         "section": "绘图题",
         "item": 2,
         "lineStart": 247,
@@ -1400,7 +1400,7 @@
         "ContourPlot"
       ],
       "source": {
-        "file": "计算物理基础课程复习题库.md",
+        "file": "sources/questions.md",
         "section": "绘图题",
         "item": 3,
         "lineStart": 257,
@@ -1429,7 +1429,7 @@
         "DensityPlot"
       ],
       "source": {
-        "file": "计算物理基础课程复习题库.md",
+        "file": "sources/questions.md",
         "section": "绘图题",
         "item": 4,
         "lineStart": 267,
@@ -1459,7 +1459,7 @@
         "Sin"
       ],
       "source": {
-        "file": "计算物理基础课程复习题库.md",
+        "file": "sources/questions.md",
         "section": "绘图题",
         "item": 5,
         "lineStart": 277,
@@ -1496,7 +1496,7 @@
         "ImplicitPlot"
       ],
       "source": {
-        "file": "计算物理基础课程复习题库.md",
+        "file": "sources/questions.md",
         "section": "绘图题",
         "item": 6,
         "lineStart": 288,
@@ -1531,7 +1531,7 @@
       "answerType": "mathematica",
       "tags": [],
       "source": {
-        "file": "计算物理基础课程复习题库.md",
+        "file": "sources/questions.md",
         "section": "绘图题",
         "item": 7,
         "lineStart": 299,
@@ -1561,7 +1561,7 @@
         "Sin"
       ],
       "source": {
-        "file": "计算物理基础课程复习题库.md",
+        "file": "sources/questions.md",
         "section": "绘图题",
         "item": 8,
         "lineStart": 309,
@@ -1590,7 +1590,7 @@
         "Sin"
       ],
       "source": {
-        "file": "计算物理基础课程复习题库.md",
+        "file": "sources/questions.md",
         "section": "绘图题",
         "item": 9,
         "lineStart": 319,
@@ -1628,7 +1628,7 @@
         "Cos"
       ],
       "source": {
-        "file": "计算物理基础课程复习题库.md",
+        "file": "sources/questions.md",
         "section": "绘图题",
         "item": 10,
         "lineStart": 330,
@@ -1667,7 +1667,7 @@
         "Sin"
       ],
       "source": {
-        "file": "计算物理基础课程复习题库.md",
+        "file": "sources/questions.md",
         "section": "绘图题",
         "item": 11,
         "lineStart": 343,
@@ -1705,7 +1705,7 @@
         "Sin"
       ],
       "source": {
-        "file": "计算物理基础课程复习题库.md",
+        "file": "sources/questions.md",
         "section": "绘图题",
         "item": 12,
         "lineStart": 355,
@@ -1742,7 +1742,7 @@
         "PlotGradientField"
       ],
       "source": {
-        "file": "计算物理基础课程复习题库.md",
+        "file": "sources/questions.md",
         "section": "绘图题",
         "item": 13,
         "lineStart": 370,
@@ -1779,7 +1779,7 @@
         "InequalityPlot"
       ],
       "source": {
-        "file": "计算物理基础课程复习题库.md",
+        "file": "sources/questions.md",
         "section": "绘图题",
         "item": 14,
         "lineStart": 380,
@@ -1814,7 +1814,7 @@
       "answerType": "mathematica",
       "tags": [],
       "source": {
-        "file": "计算物理基础课程复习题库.md",
+        "file": "sources/questions.md",
         "section": "绘图题",
         "item": 15,
         "lineStart": 391,
@@ -1849,7 +1849,7 @@
       "answerType": "self_assessment",
       "tags": [],
       "source": {
-        "file": "计算物理基础课程复习题库.md",
+        "file": "sources/questions.md",
         "section": "综合计算",
         "item": 1,
         "lineStart": 407,
@@ -1881,7 +1881,7 @@
         "Simplify"
       ],
       "source": {
-        "file": "计算物理基础课程复习题库.md",
+        "file": "sources/questions.md",
         "section": "综合计算",
         "item": 2,
         "lineStart": 444,

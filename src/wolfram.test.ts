@@ -17,6 +17,9 @@ describe("published Wolfram evidence", () => {
         )!;
         expect(r.program).toBe(v.program);
         expect(r.revision).toBe(v.revision);
+        expect(readFileSync(r.source, "utf8")).toContain(
+          `Source: ${q.source.file}, line ${q.source.lineStart}`,
+        );
         expect(readFileSync(r.source, "utf8").endsWith(v.program + "\n")).toBe(
           true,
         );

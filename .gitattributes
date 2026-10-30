@@ -1,5 +1,5 @@
 * text=auto eol=lf
-计算物理基础课程复习.md -text
-计算物理基础课程复习题库.md -text
+sources/notes.md -text
+sources/questions.md -text
 *.png binary
 *.gif binary

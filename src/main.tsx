@@ -784,7 +784,7 @@ function App() {
           <>
             <div className="page-heading compact">
               <h1>学习统计</h1>
-              <p>来自每一次真实完成的练习。</p>
+              <p>按模块查看练习次数、正确率和复习进度。</p>
             </div>
             <div className="metrics">
               {[

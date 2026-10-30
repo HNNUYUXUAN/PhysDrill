@@ -1,5 +1,5 @@
 (* PhysDrill C-015 / course / revision 1
-Source: 计算物理基础课程复习题库.md, line 391
+Source: sources/questions.md, line 391
 Generated from src/data/bank.json. Run each file in a fresh kernel. *)
 <<Graphics`InequalityGraphics`
 InequalityPlot3D[

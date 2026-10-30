@@ -5,8 +5,8 @@ dist
 output
 src/data/bank.json
 package-lock.json
-计算物理基础课程复习.md
-计算物理基础课程复习题库.md
+sources/notes.md
+sources/questions.md
 scripts/browser-*.cjs
 scripts/fixtures/invalid.json
 src/data/wolfram.json

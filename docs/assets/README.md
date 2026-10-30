@@ -1,9 +1,11 @@
 # 展示素材 / Asset provenance
 
-- `hero.webp`, `memory.webp`, `correction.webp`: 2026-10-30 在 Chrome 的 ChatGPT「README Showcase · 视觉素材」项目生成，分别表达纸笔复习、程序记忆和错题订正。三张均为无文字概念插画，中英文共用；模型标识未公开，记为 unknown。网页下载 PNG 原图，经完整解码和逐图检查后转换为 WebP。插画不表示应用截图或实验数据。
-- `overview.png`, `drill.png`, `mobile-drill.png`, `wolfram.png`, `mobile-wolfram.png`: 固定 Playwright Chromium 对实际应用的截图，桌面 1440px、手机 390px。练习记录来自隔离验收会话。
-- `drill-flow.gif`: 真实操作截图序列，每帧 2 秒；依次为输入、订正提示、匹配通过后进入下一题、错题本。播放时长不代表实际操作耗时。
-- `wolfram-gallery.webp`: 从真实 Wolfram PNG 等比例排版的四图合集，题号 C-007、C-013、C-014、C-015；原图与运行记录位于 `public/wolfram/`。
-- README 架构图用 Mermaid 原生文本维护，表示应用数据关系。Wolfram 仅用于开发阶段。
+- `meme-{cram,syntax,review}-{zh,en}.webp`：考前回忆、大小写订正和错题重练三组双格梗图，中英文分别配字。2026-10-30 使用 Chrome 内 ChatGPT「README Showcase · 视觉素材」项目的创建图片功能制作，统一猫学生、狗老师及黑白红蓝主色。采用图由网页 PNG 原图转换为 WebP，逐张核对文字、程序大小写与构图。模型标识为 `unknown`。
+- `overview.png`、`drill.png`、`mobile-drill.png`、`wolfram.png`、`mobile-wolfram.png`：固定 Playwright Chromium 截取的应用页面，桌面 1440px、手机 390px。练习记录来自隔离验收会话。
+- `drill-flow.gif`：输入、订正提示、匹配通过和错题本的操作截图序列，每帧停留 2 秒。
+- `wolfram-gallery.webp`：Wolfram 导出图的等比例合集，题号 C-007、C-013、C-014、C-015；原图和运行记录位于 `public/wolfram/`。
+- README 架构图采用 Mermaid 文本维护，展示课程资料、题库、训练状态与备份之间的数据关系。
 
-The illustrations are conceptual editorial artwork generated in the ChatGPT website. Application screenshots and motion are real browser captures. Wolfram images are actual kernel exports. The original course material remains attributed in each question; these asset notes do not grant rights to third-party course material.
+候选原图、提示词、摘要和选优记录保存在项目私有素材目录；公开目录收录采用图。课程资料的来源见题目元数据。
+
+The six memes were generated through Create Image in the ChatGPT website, with separate Chinese and English captions. Downloaded PNG originals were reviewed and converted to WebP. Application screenshots use the fixed Chromium runtime; the animation holds each captured frame for two seconds. Wolfram graphics are kernel exports, and the architecture diagram is maintained as Mermaid text. Candidate files and production records remain in the private media workspace. Course provenance is recorded per question.

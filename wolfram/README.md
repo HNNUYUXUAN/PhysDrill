@@ -35,8 +35,8 @@ wolframscript -file wolfram/TestCorrections.wls
 
 D1 ends with semicolons; the runner reads `{v2, a2}` after execution to expose the requested values `{14, 12}`. This readout is audit instrumentation, not additional exam content. D2 uses the complete flux derivative and the +Z normal convention.
 
-The executed bank version was 1. Bank version 2 only updates the C14 verification note; the tests check that every published program and revision still exactly matches the current bank.
+The executed bank version was 1. Bank version 2 updates the C14 verification note; version 3 migrates source paths and refines explanatory text. The tests check that every published program and revision still exactly matches the current bank.
 
-`evaluated` means execution completed without diagnostic output. It is not a universal mathematical correctness certificate. `messages` keeps the exact kernel diagnostic; an unevaluated old command is not marked as a working modern plot. Earlier RegionPlot tool-session diagnostics did not recur in the fresh local kernel; the actual disk export shows the circular region. See [verification notes](../docs/verification.md).
+`evaluated` means execution completed without diagnostic output. `messages` preserves the exact kernel diagnostics, including legacy-package compatibility requirements. Mathematical assumptions and the RegionPlot verification history are in the [verification record](../docs/verification.md).
 
-The web application only displays these precomputed assets. It does not send answers to Wolfram or run a kernel in the browser.
+The web application displays these precomputed assets; training and progress storage run locally in the browser.

@@ -154,15 +154,53 @@ export const initial = (): State => ({
   session: null,
 });
 export const STORAGE = "physdrill.v1";
+const legacySources = [
+  [
+    "计算物理基础课程复习题库.md",
+    "sources/questions.md",
+    "9a2daf60b607e10afe5424030c01bcd6e7846fa6fea0b90de36de4c01f30632d",
+  ],
+  [
+    "计算物理基础课程复习.md",
+    "sources/notes.md",
+    "7481727bf1dbbec75dda5eca07e89d1b9eb4515fc82b2b73f30f5b1cbf81f7a9",
+  ],
+] as const;
+/** Match both path and content identity so imported custom sources stay intact. */
+export function migrateSources(b: Bank): Bank {
+  return {
+    ...b,
+    questions: b.questions.map((q) => {
+      const source = legacySources.find(
+        ([file, , sha]) => q.source.file === file && q.source.sha256 === sha,
+      );
+      return source ? { ...q, source: { ...q.source, file: source[1] } } : q;
+    }),
+  };
+}
+export function restoreState(saved: State): State {
+  const normalized = { ...saved, bank: migrateSources(saved.bank) };
+  // Upgrade the bundled bank only when every question still has its source identity.
+  const bundled =
+    normalized.bank.questions.length === bank.questions.length &&
+    normalized.bank.questions.every((q) =>
+      bank.questions.some(
+        (fresh) =>
+          fresh.id === q.id &&
+          fresh.source.file === q.source.file &&
+          fresh.source.sha256 === q.source.sha256,
+      ),
+    );
+  return bundled && normalized.bank.bankVersion < bank.bankVersion
+    ? upgradeBank(normalized, bank)
+    : normalized;
+}
 export function load() {
   try {
     const raw = localStorage.getItem(STORAGE);
     const saved = raw ? stateSchema.parse(JSON.parse(raw)) : initial();
     return {
-      state:
-        saved.bank.bankVersion < bank.bankVersion
-          ? upgradeBank(saved, bank)
-          : saved,
+      state: restoreState(saved),
       error: "",
     };
   } catch {
@@ -244,7 +282,7 @@ export function syntax(q: Question, p: Profile, rng = Math.random) {
     if (fn[0] === "Sin")
       edits.push({
         code: code.replace("Sin[", "Cos["),
-        reason: "本题要求 Sin，不能替换为 Cos。",
+        reason: "本题的正弦函数对应 Sin。",
       });
   }
   if (code.includes("=="))
@@ -460,8 +498,8 @@ export function importData(raw: string): {
 } {
   const data = JSON.parse(raw);
   return "schemaVersion" in data
-    ? { type: "backup", data: stateSchema.parse(data) }
-    : { type: "bank", data: bankSchema.parse(data) };
+    ? { type: "backup", data: restoreState(stateSchema.parse(data)) }
+    : { type: "bank", data: migrateSources(bankSchema.parse(data)) };
 }
 export function replaceBank(s: State, b: Bank): State {
   const progress = { ...s.progress };

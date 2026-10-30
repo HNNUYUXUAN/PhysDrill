@@ -20,6 +20,8 @@ import {
   replaceBank,
   upgradeBank,
   stateSchema,
+  restoreState,
+  migrateSources,
   type Config,
 } from "./core";
 const config: Config = {
@@ -31,6 +33,53 @@ const config: Config = {
   order: "source",
   length: 10,
 };
+describe("source path migration", () => {
+  const legacy = () => {
+    const s = structuredClone(initial());
+    s.bank.bankVersion = 2;
+    for (const q of s.bank.questions)
+      q.source.file = "计算物理基础课程复习题库.md";
+    return s;
+  };
+  it("restores legacy progress, wrong history and a revealed draft on load and import", () => {
+    let s = start(legacy(), config);
+    s.session!.revealed = true;
+    s = rate(s, "wrong");
+    s = next(s);
+    s.session!.draft = "Cos[";
+    s.session!.revealed = true;
+    const restored = restoreState(s);
+    expect(restored.bank.bankVersion).toBe(3);
+    expect(
+      restored.bank.questions.every(
+        (q) => q.source.file === "sources/questions.md",
+      ),
+    ).toBe(true);
+    expect(restored.session).toEqual(s.session);
+    expect(restored.progress).toEqual(s.progress);
+    expect(restored.attempts).toEqual(s.attempts);
+    expect(restored.attempts).toHaveLength(1);
+    expect(importData(JSON.stringify(s)).data).toEqual(restored);
+    expect(importData(JSON.stringify(restored)).data).toEqual(restored);
+  });
+  it("requires matching source hashes and preserves custom banks during restore", () => {
+    const s = legacy();
+    s.bank.questions[0].source.sha256 = "custom-content";
+    s.bank.questions[1].source.file = "custom/questions.md";
+    const restored = restoreState(s);
+    expect(restored.bank.bankVersion).toBe(2);
+    expect(restored.bank.questions[0].source).toEqual(
+      s.bank.questions[0].source,
+    );
+    expect(restored.bank.questions[1].source).toEqual(
+      s.bank.questions[1].source,
+    );
+    expect(restored.bank.questions[2].source.file).toBe("sources/questions.md");
+    expect(importData(JSON.stringify(s.bank)).data).toEqual(
+      migrateSources(s.bank),
+    );
+  });
+});
 describe("immediate feedback", () => {
   it("preserves an active draft during a documentation-only bank update", () => {
     const s = start(initial(), config);
